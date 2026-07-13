@@ -86,6 +86,7 @@ class CgtAdapter(PipelineAdapter):
         "rate_values": "fetch_rate_values",  # parsed $ values from the rate sheet PDF
     }
     HEAVY_DATASETS = ("rate_values",)
+    BACKFILL_DATASETS = ("capacity", "flows")  # XLSX / supply-demand archives
 
     # -- capacity ----------------------------------------------------------
 

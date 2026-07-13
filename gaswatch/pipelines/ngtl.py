@@ -50,6 +50,7 @@ class NgtlAdapter(PipelineAdapter):
         "rate_values": "fetch_rate_values",  # parsed headline tolls
     }
     HEAVY_DATASETS = ("rate_values",)
+    BACKFILL_DATASETS = ("flows",)  # DOP API by gas day (inherited by Foothills)
 
     # CER open-data daily throughput/capacity (quarterly-updated, Open
     # Government Licence – Canada). One-time/occasional import.

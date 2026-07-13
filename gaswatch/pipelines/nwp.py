@@ -46,6 +46,7 @@ class NwpAdapter(PipelineAdapter):
         "rate_values": "fetch_rate_values",  # parsed $ values from the tariff PDF
     }
     HEAVY_DATASETS = ("rate_values",)
+    BACKFILL_DATASETS = ("capacity",)  # OAC history to 1998 (slow, ~1 req/s)
 
     # -- capacity -------------------------------------------------------------
 

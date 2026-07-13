@@ -36,6 +36,10 @@ class PipelineAdapter(ABC):
     # datasets that need headless-browser emulation; pull-all skips them
     # unless --include-browser
     BROWSER_DATASETS: frozenset[str] = frozenset()
+    # datasets whose source has a date-addressable archive, so `backfill` (and
+    # the `setup` bootstrap) can rebuild a historical range for them. Datasets
+    # not listed here only ever hold the current posting.
+    BACKFILL_DATASETS: tuple[str, ...] = ()
 
     def datasets(self) -> list[str]:
         return list(self.DATASETS)

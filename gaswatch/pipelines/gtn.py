@@ -42,6 +42,7 @@ class GtnAdapter(PipelineAdapter):
         "rate_values": "fetch_rate_values",  # parsed $ values (6 MB tariff download)
     }
     HEAVY_DATASETS = ("rate_values",)
+    BACKFILL_DATASETS = ("capacity",)  # daily JSON endpoint, all cycles
 
     # -- capacity (+ scheduled) ------------------------------------------------
 

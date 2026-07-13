@@ -68,6 +68,7 @@ class EpngAdapter(PipelineAdapter):
         "rate_values": "fetch_rate_values",  # parsed $ values (45 MB tariff download)
     }
     HEAVY_DATASETS = ("rate_values",)
+    BACKFILL_DATASETS = ("capacity",)  # past days settle to Cycle 7
 
     # -- grid plumbing -------------------------------------------------------
 

@@ -113,6 +113,47 @@ def pull(
     raise typer.Exit(0 if ok else 1)
 
 
+def _pull_all(conn, client, day: date, include_browser: bool, include_heavy: bool) -> int:
+    """Pull every current-day dataset for every pipeline. Returns failure count."""
+    failures = 0
+    for name in pipeline_names():
+        try:
+            adapter = get_adapter(name)
+        except Exception as exc:
+            log.error("%s unavailable: %s", name, exc)
+            failures += 1
+            continue
+        for ds in adapter.datasets():
+            if ds in adapter.BROWSER_DATASETS and not include_browser:
+                log.info("%s/%s skipped (browser-based; use --include-browser)", name, ds)
+                continue
+            if ds in adapter.HEAVY_DATASETS and not include_heavy:
+                log.info("%s/%s skipped (large download; use --include-heavy)", name, ds)
+                continue
+            if not _pull_one(conn, client, name, ds, day):
+                failures += 1
+    return failures
+
+
+def _backfill_all(conn, client, d0: date, d1: date) -> tuple[int, int]:
+    """Backfill [d0, d1] for every pipeline's BACKFILL_DATASETS.
+
+    Returns (datasets_attempted, failures)."""
+    attempted = failures = 0
+    for name in pipeline_names():
+        try:
+            adapter = get_adapter(name)
+        except Exception as exc:
+            log.error("%s unavailable: %s", name, exc)
+            continue
+        for ds in adapter.BACKFILL_DATASETS:
+            attempted += 1
+            log.info("backfilling %s/%s %s..%s", name, ds, d0, d1)
+            if not _pull_one(conn, client, name, ds, d1, start=d0, end=d1):
+                failures += 1
+    return attempted, failures
+
+
 @app.command("pull-all")
 def pull_all(
     gas_day: str = typer.Option(None, "--gas-day", help="YYYY-MM-DD (default today)"),
@@ -127,29 +168,57 @@ def pull_all(
     day = _parse_day(gas_day)
     conn = dbm.connect(db)
     client = EbbClient()
-    failures = 0
     try:
-        for name in pipeline_names():
-            try:
-                adapter = get_adapter(name)
-            except Exception as exc:
-                log.error("%s unavailable: %s", name, exc)
-                failures += 1
-                continue
-            for ds in adapter.datasets():
-                if ds in adapter.BROWSER_DATASETS and not include_browser:
-                    log.info("%s/%s skipped (browser-based; use --include-browser)", name, ds)
-                    continue
-                if ds in adapter.HEAVY_DATASETS and not include_heavy:
-                    log.info("%s/%s skipped (large download; use --include-heavy)", name, ds)
-                    continue
-                if not _pull_one(conn, client, name, ds, day):
-                    failures += 1
+        failures = _pull_all(conn, client, day, include_browser, include_heavy)
     finally:
         client.close()
         conn.close()
     if failures:
         log.warning("%d dataset pulls failed", failures)
+    raise typer.Exit(1 if failures else 0)
+
+
+@app.command()
+def setup(
+    start: str = typer.Option(..., help="Backfill window start, YYYY-MM-DD"),
+    end: str = typer.Option(None, help="Backfill window end, YYYY-MM-DD (default today)"),
+    include_browser: bool = typer.Option(False, "--include-browser",
+                                         help="Include the Playwright-based Ruby pull in the "
+                                              "current-state step"),
+    include_heavy: bool = typer.Option(False, "--include-heavy",
+                                       help="Include multi-MB tariff-PDF rate-value pulls in the "
+                                            "current-state step"),
+    skip_current: bool = typer.Option(False, "--skip-current",
+                                      help="Skip the initial pull-all of current state; only "
+                                           "init the DB and backfill history"),
+    db: Path = typer.Option(dbm.DEFAULT_DB),
+):
+    """Bootstrap a database from scratch: create it, pull current state, then
+    backfill every pipeline's history-capable datasets over the start..end window.
+
+    Replaces the manual init-db + pull-all + per-pipeline backfill sequence.
+    Kern River (rolling window) and Ruby history are not rebuildable and are
+    only captured as current state. Widen --start for deeper history where the
+    archives allow (NWP to 1998, SoCal to 2000, NGTL CER to 2006)."""
+    d0, d1 = _parse_day(start), _parse_day(end)
+    if d1 < d0:
+        raise typer.BadParameter("end before start")
+    conn = dbm.connect(db)  # creates the schema if the file is new (== init-db)
+    client = EbbClient()
+    current_failures = attempted = backfill_failures = 0
+    try:
+        if not skip_current:
+            log.info("=== current state: pull-all ===")
+            current_failures = _pull_all(conn, client, d1, include_browser, include_heavy)
+        log.info("=== history: backfill %s..%s ===", d0, d1)
+        attempted, backfill_failures = _backfill_all(conn, client, d0, d1)
+    finally:
+        client.close()
+        conn.close()
+    failures = current_failures + backfill_failures
+    log.info("setup done: %d backfill datasets, %d failures (%d current, %d backfill)",
+             attempted, failures, current_failures, backfill_failures)
+    typer.echo(f"database ready at {db}")
     raise typer.Exit(1 if failures else 0)
 
 

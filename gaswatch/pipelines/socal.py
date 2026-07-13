@@ -53,6 +53,7 @@ class SocalAdapter(PipelineAdapter):
         "rate_values": "fetch_rate_values",  # parsed G-BTS backbone rates
     }
     HEAVY_DATASETS = ("rate_values",)
+    BACKFILL_DATASETS = ("capacity_archive",)  # monthly workbooks back to 2000
 
     # SoCal tariffs are CPUC-filed, published through the tariff-book SPA whose
     # backing JSON API serves both the schedule index and the current PDFs.

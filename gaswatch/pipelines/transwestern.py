@@ -51,6 +51,7 @@ class TranswesternAdapter(PipelineAdapter):
         "rate_values": "fetch_rate_values",  # parsed $ values from the rate matrix PDF
     }
     HEAVY_DATASETS = ("rate_values",)
+    BACKFILL_DATASETS = ("capacity",)  # capacity CSV back to ~2015
 
     # -- capacity ------------------------------------------------------------
 

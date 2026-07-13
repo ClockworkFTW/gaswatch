@@ -158,8 +158,24 @@ pull and only fetches bodies that are still missing.
 ### Rebuilding the database from scratch (new machine)
 
 The fastest path is copying `data/gaswatch.db` — it's one self-contained SQLite
-file. To rebuild one year of history from the sources instead (adjust dates;
-every archive below reaches at least a year back):
+file. To rebuild from the sources instead, one command does the whole
+sequence — create the DB, pull current state, then backfill every
+history-capable dataset (`BACKFILL_DATASETS` per adapter) over a date range:
+
+```powershell
+# one year of history, current state incl. rates + Ruby:
+.\.venv\Scripts\gaswatch.exe setup --start 2025-07-13 --include-heavy --include-browser
+# only init + backfill (skip the current-state pull-all):
+.\.venv\Scripts\gaswatch.exe setup --start 2025-07-13 --skip-current
+```
+
+`--end` defaults to today. Widen `--start` for deeper history where the
+archives allow (see limits below). Kern River and Ruby history aren't
+rebuildable and are captured only as current state (drop `--include-browser`
+to skip Ruby's Playwright pull).
+
+To run the equivalent steps by hand instead (adjust dates; every archive below
+reaches at least a year back):
 
 ```powershell
 .\.venv\Scripts\gaswatch.exe init-db
