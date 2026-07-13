@@ -2,11 +2,13 @@
 from __future__ import annotations
 
 import logging
+import ssl
 import time
 from pathlib import Path
 from urllib.parse import urlsplit
 
 import httpx
+import truststore
 
 log = logging.getLogger("gaswatch.http")
 
@@ -28,11 +30,18 @@ class EbbClient:
     """
 
     def __init__(self, timeout: float = 60.0):
+        # Verify TLS against the OS trust store (Windows CryptoAPI / macOS
+        # Security framework / Linux system CAs) instead of the static certifi
+        # bundle. The OS verifier fetches missing intermediate CAs via AIA,
+        # which certifi cannot — some pipeline tariff/rate hosts serve
+        # incomplete chains that fail certifi with CERTIFICATE_VERIFY_FAILED.
+        # It also transparently picks up any corporate root on a managed network.
+        ctx = truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
         self._client = httpx.Client(
             headers={"User-Agent": USER_AGENT, "Accept-Encoding": "gzip, deflate"},
             timeout=timeout,
             follow_redirects=True,
-            verify=True,
+            verify=ctx,
         )
         self._last_hit: dict[str, float] = {}
 
