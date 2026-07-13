@@ -50,6 +50,16 @@ def _browser_page():
             user_agent=("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                         "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"),
             viewport={"width": 1400, "height": 1000},
+            # page.request (Playwright's APIRequestContext) validates TLS against
+            # Node's bundled CA list, which — unlike Chromium and our OS-store
+            # httpx client — lacks any root injected by local TLS interception
+            # (AV HTTPS scanning / endpoint agents). That makes body/PDF fetches
+            # fail with "self-signed certificate in certificate chain" even though
+            # page.goto to the same host succeeds. Ruby only fetches public,
+            # credential-free pipeline data (the parsers sanity-check it), so skip
+            # cert validation for this browser context rather than shipping a
+            # machine-specific NODE_EXTRA_CA_CERTS bundle.
+            ignore_https_errors=True,
         )
         page = context.new_page()
         try:
