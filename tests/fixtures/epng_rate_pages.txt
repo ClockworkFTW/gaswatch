@@ -1,0 +1,436 @@
+@@@PAGE 18@@@
+ 
+ 
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates  
+FERC Gas Tariff Section 1 - Service Rates 
+Third Revised Volume No. 1A Version 1.0.0 
+  
+ 
+Issued on: August 17, 2012 Effective on: September 18, 2012 
+ 
+ 
+ 
+ 
+ 
+ 
+SERVICE RATES 
+18
+@@@PAGE 19@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 1.1 - Production Area Rates
+Third Revised Volume No. 1A Version 17.0.0
+Issued on: November 21, 2024                 Effective on: January 1, 2025
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+(Rates per dth)
+PRODUCTION AREA RATES 4/
+FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16
+RESERVATION RATES
+Monthly Reservation 5/ $2.3299 $2.5641 $2.7193 $2.9139 $4.6598 $3.1481 $3.3823 $3.5375 $3.7321
+Daily Reservation 1/
+Maximum $0.0766 $0.0843 $0.0894 $0.0958 $0.1532 $0.1035 $0.1112 $0.1163 $0.1227
+Minimum $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000
+RESERVATION RATES – ARTICLE 11.2(B)
+Monthly Reservation 5/ $2.2539 $2.4790 $2.6310 $2.8166 $4.5078  
+Daily Reservation 1/
+Maximum $0.0741 $0.0815 $0.0865 $0.0926 $0.1482
+Minimum $0.0000 $0.0000 $0.0000 $0.0000 $0.0000
+USAGE RATES - DAILY 1/
+Maximum $0.0029 $0.0034 $0.0037 $0.0041 $0.0077 $0.0029 $0.0034 $0.0037 $0.0041
+Minimum $0.0029 $0.0034 $0.0037 $0.0041 $0.0077 $0.0029 $0.0034 $0.0037 $0.0041
+Daily Authorized
+Overrun 7/ 9/ FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16 
+Mainline Backhaul 3/   (Forward haul rate identified above applicable to the delivery zone for which service is provided.)
+Fuel and L&U See the Fuel and L&U Statement of Rates.
+--------------------------
+See the Statement of Rates Footnotes.
+Surcharges are shown in Footnote 1.
+19
+@@@PAGE 20@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 1.2 - Texas Rates
+Third Revised Volume No. 1A Version 17.0.0
+Issued on: November 21, 2024                 Effective on: January 1, 2025
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+(Rates per dth)
+TEXAS RATES 4/
+FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16
+RESERVATION RATES
+Monthly Reservation 5/ $6.7403 $7.4156 $7.8627 $8.4254 $13.4807 $7.5585 $8.2338 $8.6809 $9.2436
+Daily Reservation 1/
+Maximum $0.2216 $0.2438 $0.2585 $0.2770 $0.4432 $0.2485 $0.2707 $0.2854 $0.3039
+Minimum $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000
+RESERVATION RATES – ARTICLE 11.2(B)
+Monthly Reservation 5/ $6.5183 $7.1723 $7.6072 $8.1517 $13.0396
+Daily Reservation 1/
+Maximum $0.2143 $0.2358 $0.2501 $0.2680 $0.4287
+Minimum $0.0000 $0.0000 $0.0000 $0.0000 $0.0000
+USAGE RATES - DAILY 1/
+Maximum $0.0077 $0.0084 $0.0089 $0.0096 $0.0153 $0.0077 $0.0084 $0.0089 $0.0096
+Minimum $0.0077 $0.0084 $0.0089 $0.0096 $0.0153 $0.0077 $0.0084 $0.0089 $0.0096
+Daily Authorized
+Overrun 7/ 9/ FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16 
+Mainline Backhaul 3/   (Forward haul rate identified above applicable to the delivery zone for which service is provided.)
+Fuel and L&U See the Fuel and L&U Statement of Rates.
+--------------------------
+See the Statement of Rates Footnotes.
+Surcharges are shown in Footnote 1. 
+20
+@@@PAGE 21@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 1.3 - New Mexico Rates
+Third Revised Volume No. 1A Version 17.0.0
+Issued on: November 21, 2024                 Effective on: January 1, 2025
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+(Rates per dth)
+NEW MEXICO RATES 4/
+FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16
+RESERVATION RATES
+Monthly Reservation 5/ $6.8225 $7.5038 $7.9600 $8.5288 $13.6449 $7.6407 $8.3220 $8.7783 $9.3470
+Daily Reservation 1/
+Maximum $0.2243 $0.2467 $0.2617 $0.2804 $0.4486 $0.2512 $0.2736 $0.2886 $0.3073
+Minimum $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000
+RESERVATION RATES – ARTICLE 11.2(B)
+Monthly Reservation 5/ $6.6004 $7.2605 $7.7015 $8.2520 $13.2008 
+Daily Reservation 1/
+Maximum $0.2170 $0.2387 $0.2532 $0.2713 $0.4340
+Minimum $0.0000 $0.0000 $0.0000 $0.0000 $0.0000
+USAGE RATES - DAILY 1/
+Maximum $0.0079 $0.0087 $0.0093 $0.0099 $0.0158 $0.0079 $0.0087 $0.0093 $0.0099
+Minimum $0.0079 $0.0087 $0.0093 $0.0099 $0.0158 $0.0079 $0.0087 $0.0093 $0.0099
+Daily Authorized
+Overrun 7/ 9/ FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16 
+Mainline Backhaul 3/   (Forward haul rate identified above applicable to the delivery zone for which service is provided.)
+Fuel and L&U See the Fuel and L&U Statement of Rates.
+--------------------------
+See the Statement of Rates Footnotes.
+Surcharges are shown in Footnote 1. 
+21
+@@@PAGE 22@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 1.4 - Arizona Rates
+Third Revised Volume No. 1A Version 17.0.0
+Issued on: November 21, 2024                 Effective on: January 1, 2025
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+(Rates per dth)
+ARIZONA RATES 4/
+FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16
+RESERVATION RATES
+Monthly Reservation 5/ $8.7265 $9.5995 $10.1805 $10.9074 $17.4531 $9.5448 $10.4177 $10.9987 $11.7256
+Daily Reservation 1/
+Maximum $0.2869 $0.3156 $0.3347 $0.3586 $0.5738 $0.3138 $0.3425 $0.3616 $0.3855
+Minimum $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000
+RESERVATION RATES – ARTICLE 11.2(B)
+Monthly Reservation 5/ $8.4406 $9.2832 $9.8489 $10.5515 $16.8813 
+Daily Reservation 1/
+Maximum $0.2775 $0.3052 $0.3238 $0.3469 $0.5550
+Minimum $0.0000 $0.0000 $0.0000 $0.0000 $0.0000
+USAGE RATES - DAILY 1/
+Maximum $0.0093 $0.0102 $0.0108 $0.0116 $0.0185 $0.0093 $0.0102 $0.0108 $0.0116
+Minimum $0.0093 $0.0102 $0.0108 $0.0116 $0.0185 $0.0093 $0.0102 $0.0108 $0.0116
+Daily Authorized
+Overrun 7/ 9/ FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16 
+Mainline Backhaul 3/   (Forward haul rate identified above applicable to the delivery zone for which service is provided.)
+Fuel and L&U See the Fuel and L&U Statement of Rates.
+--------------------------
+See the Statement of Rates Footnotes.
+Surcharges are shown in Footnote 1. 
+22
+@@@PAGE 23@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 1.5 - Nevada Rates
+Third Revised Volume No. 1A Version 17.0.0
+Issued on: November 21, 2024                 Effective on: January 1, 2025
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+(Rates per dth)
+NEVADA RATES 4/
+FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16
+RESERVATION RATES
+Monthly Reservation 5/ $9.1493 $10.0649 $10.6732 $11.4367 $18.2987 $9.9675 $10.8831 $11.4914 $12.2549
+Daily Reservation 1/
+Maximum $0.3008 $0.3309 $0.3509 $0.3760 $0.6016 $0.3277 $0.3578 $0.3778 $0.4029
+Minimum $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000 $0.0000
+RESERVATION RATES – ARTICLE 11.2(B)
+Monthly Reservation 5/ $8.8482 $9.7364 $10.3265 $11.0625 $17.7025  
+Daily Reservation 1/
+Maximum $0.2909 $0.3201 $0.3395 $0.3637 $0.5820
+Minimum $0.0000 $0.0000 $0.0000 $0.0000 $0.0000
+USAGE RATES - DAILY 1/
+Maximum $0.0094 $0.0104 $0.0110 $0.0118 $0.0188 $0.0094 $0.0104 $0.0110 $0.0118
+Minimum $0.0094 $0.0104 $0.0110 $0.0118 $0.0188 $0.0094 $0.0104 $0.0110 $0.0118
+Daily Authorized
+Overrun 7/ 9/ FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16
+Mainline Backhaul 3/   (Forward haul rate identified above applicable to the delivery zone for which service is provided.)
+Fuel and L&U See the Fuel and L&U Statement of Rates.
+--------------------------
+See the Statement of Rates Footnotes.
+Surcharges are shown in Footnote 1. 
+23
+@@@PAGE 24@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 1.6 - California Rates
+Third Revised Volume No. 1A Version 17.0.0
+Issued on: November 21, 2024                 Effective on: January 1, 2025
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+(Rates per dth)
+CALIFORNIA RATES 4/
+FT-1 FTH-3 FTH-12 FTH-16 FTH-8 NNTD NNTH-3 NNTH-12 NNTH-16
+RESERVATION RATES
+Monthly Reservation 5/ $9.5660 N/A N/A N/A N/A $10.3843 N/A N/A N/A
+Daily Reservation 1/
+Maximum $0.3145 N/A N/A N/A N/A $0.3414 N/A N/A N/A
+Minimum $0.0000 N/A N/A N/A N/A $0.0000 N/A N/A N/A
+RESERVATION RATES – ARTICLE 11.2(B)
+Monthly Reservation 5/ $9.2528 N/A N/A N/A N/A  
+Daily Reservation 1/
+Maximum $0.3042 N/A N/A N/A N/A
+Minimum $0.0000 N/A N/A N/A N/A
+USAGE RATES - DAILY 1/
+Maximum $0.0096 N/A N/A N/A N/A $0.0096 N/A N/A N/A
+Minimum $0.0096 N/A N/A N/A N/A $0.0096 N/A N/A N/A
+Daily Authorized
+Overrun 7/ 9/ FT-1 N/A N/A N/A N/A NNTD N/A N/A N/A
+ 
+Mainline Backhaul 3/   (Forward haul rate identified above applicable to the delivery zone for which service is provided.)
+Fuel and L&U See the Fuel and L&U Statement of Rates.
+--------------------------
+See the Statement of Rates Footnotes.
+Surcharges are shown in Footnote 1. 
+24
+@@@PAGE 25@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 1.7 - Lateral, System-wide Balancing & Storage Rates
+Third Revised Volume No. 1A Version 19.0.0
+Issued on: November 21, 2024                 Effective on: January 1, 2025
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+(Rates per dth)
+LATERAL LINE FACILITIES CHARGES 4/
+Monthly Daily Maximum Daily Minimum Daily Maximum Daily Minimum Daily Authorized
+FT-1 Willcox 2/ Reservation 5/ Reservation Reservation Usage Usage      Overrun 
+$2.9196 $0.0960 $0.0000 $0.0000 $0.0000 FT-1   7/ 9/
+IT-1 1/
+Willcox N/A N/A N/A $0.2962 $0.0000
+IHSW
+Willcox N/A N/A N/A $0.3586 $0.0000
+PAL
+Willcox N/A N/A N/A $0.2962 $0.0000 Max PAL Usage
+SYSTEM-WIDE BALANCING & STORAGE RATES 4/
+Monthly Daily Maximum Daily Minimum Daily Maximum Daily Minimum
+Reservation 5/ Reservation 1/ Reservation 1/ Usage 1/ Usage 1/
+FDBS $8.1851 $0.2691 $0.0000 $0.0000 $0.0000
+Mainline Backhaul 3/ (Forward haul rate identified above applicable to the delivery zone for which service is provided.)
+Storage Inventory Quantity Injection Quantity Withdrawal
+Maximum Minimum Maximum Minimum Maximum Minimum
+ISS $0.0386 $0.0000 $0.0267 $0.0267 $0.0444 $0.0444
+Fuel and L&U See the Fuel and L&U Statement of Rates.
+--------------------------
+See the Statement of Rates Footnotes.
+Surcharges are shown in Footnote 1. 
+25
+@@@PAGE 26@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 1.8 - Firm Small Shipper Service Rates
+Third Revised Volume No. 1A Version 17.0.0
+Issued on: November 21, 2024                 Effective on: January 1, 2025
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+(Rates per dth)
+FIRM SMALL SHIPPER SERVICES 4/
+Contract Quantity Equal to or Less than 10,000 dth/d
+Texas New Mexico Arizona 
+FT-2 1/
+Tier 1 Daily Usage 8/
+Maximum $0.3759 $0.3805 $0.4860
+Minimum $0.0077 $0.0079 $0.0093
+Tier 2 Daily Usage
+Maximum $0.4511 $0.4565 $0.5832
+Minimum $0.0077 $0.0079 $0.0093
+FT-2 – Article 11.2(b)  1/
+Tier 1 Daily Usage
+Maximum $0.3639 $0.3683 $0.4704
+Minimum $0.0077 $0.0079 $0.0093
+Tier 2 Daily Usage
+Maximum $0.4367 $0.4419 $0.5645
+Minimum $0.0077 $0.0079 $0.0093
+Monthly Daily Maximum Daily Minimum Daily Maximum Daily Minimum Daily Authorized
+Reservation 5/ Reservation 1/ Reservation 1/ Usage 1/ Usage 1/ Overrun 7/ 9/
+FTH-V $2.5641 $0.0843 $0.0000 $0.0034 $0.0034 FTHV
+FTH-V – Article 11.2(b) $2.4790 $0.0815 $0.0000 $0.0034 $0.0034 FTHV – Article 11.2(b)
+Mainline Backhaul 3/  (Forward haul rate identified above applicable to the delivery zone for which service is provided.)
+Fuel and L&U See the Fuel and L&U Statement of Rates.
+--------------------------
+See the Statement of Rates Footnotes.
+Surcharges are shown in Footnote 1. 
+26
+@@@PAGE 27@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 1.9 - Interruptible and PAL Rates
+Third Revised Volume No. 1A Version 18.0.0
+Issued on: November 21, 2024                 Effective on: January 1, 2025
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+(Rates per dth)
+ZONAL RATES - Daily Usage
+IT-1 1/ IHSW PAL Parking PAL Lending
+Production Area
+Maximum $0.0795 $0.0999 $0.2569 $0.2569
+Minimum $0.0029 $0.0041 $0.0000 $0.0000
+Texas
+Maximum $0.2293 $0.2866 $0.2569 $0.2569
+Minimum $0.0077 $0.0096 $0.0000 $0.0000
+New Mexico
+Maximum $0.2322 $0.2903 $0.2569 $0.2569
+Minimum $0.0079 $0.0099 $0.0000 $0.0000
+Arizona
+Maximum $0.2962 $0.3702 $0.2569 $0.2569
+Minimum $0.0093 $0.0116 $0.0000 $0.0000
+Nevada
+Maximum $0.3102 $0.3878 $0.2569 $0.2569
+Minimum $0.0094 $0.0118 $0.0000 $0.0000
+California
+Maximum $0.3241 N/A $0.2569 $0.2569
+Minimum $0.0096 N/A $0.0000 $0.0000
+Daily Authorized
+Overrun N/A N/A Max PAL Usage Max PAL Usage
+Mainline Backhaul 3/  (Forward haul rate identified above applicable to the delivery zone for which service is provided.)
+Fuel and L&U             See the Fuel and L&U Statement of Rates.
+--------------------------
+See the Statement of Rates Footnotes.
+Surcharges are shown in Footnote 1.
+27
+@@@PAGE 28@@@
+ 
+ 
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates 
+FERC Gas Tariff Section 2 - Charges/Penalties 
+Third Revised Volume No. 1A Version 5.0.0 
+  
+ 
+ 
+Issued on: May 14, 2018                 Effective on: May 3, 2018 
+ 
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS 
+(Rates per dth) 
+ 
+CHARGES/PENALTIES 6/ 10/ 
+ 
+NON-CRITICAL CONDITION: 11/ 
+Hourly Scheduling Penalty (GT&C Section 14.1): 100% LF FT-1 rate equivalent (e.g., 100% LF IT rate)  
+ 
+Daily Unauthorized Overrun Penalty (Rate Schedules, as applicable) 
+When unauthorized overrun quantities are equal to or less than the Safe Harbor Tolerance Quantities:  Authorized Overrun rate 
+When unauthorized overrun quantities are allocated to non-telemetered points:  Authorized Overrun rate (Rate Schedules, as applicable) 
+When unauthorized overrun quantities are greater than the Safe Harbor Tolerance Quantities:  2 x 100% LF FT-1 rate equivalent  
+ 
+MDO/MHO Violation Penalty (Rate Schedule OPAS):  $0.0000 
+  
+CRITICAL CONDITION:  
+Hourly Penalties 
+Hourly Scheduling Penalty (GT&C Section 14.1):  2 x Critical Condition Rate 
+MHO Violation Penalty (Rate Schedule OPAS):  2 x Critical Condition Rate 
+ 
+ 
+Daily Charges/Penalties - The Critical Condition Rate shall be determined based upon the charge/penalty quantity within each Tier Level relative to the daily delivery variance above the applicable Safe 
+Harbor. 
+     
+    Lower of  
+        Delivery Variance Quantity or Delivery Variance Percentage       Charge/Penalty Rate      
+Tier Level I 3,500 dth or Less 0% - 15%  1.5 x Critical Condition Rate 
+Tier Level II 3,501 dth - 5,000 dth     >15% - 50% 2   x Critical Condition Rate 
+Tier Level III 5,001 dth or Greater     >50%  2.5 x Critical Condition Rate 
+ 
+The Critical Condition Daily Charge/Penalty Rate is applicable to: 
+SOC/COC Daily Imbalance Charge (GT&C Section 11.1) 
+Daily Unauthorized Overrun Penalty (Rate Schedules, as applicable) 
+When unauthorized overrun quantities are greater than the Safe Harbor Tolerance Quantities 
+MDO Violation Penalty (Rate Schedule OPAS) 
+ 
+ 
+ 
+ 
+ 
+ 
+-------------------------- 
+See the Statement of Rates Footnotes. 
+ 
+ 
+28
+@@@PAGE 29@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 3 - Fuel and L&U Rates
+Third Revised Volume No. 1A Version 22.0.0
+Issued on: November 26, 2025                 Effective on: January 1, 2026
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+FUEL, L&U and EPC CHARGES 1/
+                                              
+           Collection Volumetric Total
+Fuel and L&U                   Period True-up Retention
+                        
+Mainline Fuel 2.07% 0.01% 2.08%
+Production Area Fuel: 
+Anadarko Basin 0.29% -0.06% 0.23%
+   Permian Basin 0.19% 0.00% 0.19%
+   San Juan Basin 0.54% 0.02% 0.56% 
+Permian - Anadarko Fuel 0.42% 0.08% 0.50%
+Rate Schedule ISS Fuel 2.87% -0.02% 2.85%
+Willcox Lateral Incremental Fuel  2/ 1.37% 0.01% 1.38%
+L&U  3/ 0.17% 0.05% 0.22%
+           Collection 
+Electric Power Cost  4/                 Period True-up Total
+                        
+Permian Basin $0.0015 $0.0000 $0.0015
+29
+@@@PAGE 30@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 3 - Fuel and L&U Rates
+Third Revised Volume No. 1A Version 22.0.0
+Issued on: November 26, 2025                 Effective on: January 1, 2026
+1/ The Fuel charges are applicable to the quantity received.  The Fuel charge may be discounted by Transporter; provided, 
+however, that the discounted fuel shall not be less than actual fuel incurred.  See Section 13 of the GT&C for further 
+information. 
+2/ New firm service in effect after the in service date of the Willcox Lateral Expansion facilities shall be assessed the Willcox 
+Lateral Incremental Fuel percentage.   
+3/ Transporter shall assess L&U charges only once.  As long as Transporter is the sole supplier of quantities to the Willcox 
+Lateral, L&U charges will be assessed on a Shipper’s mainline TSA.  If, in the future, a third party physically interconnects 
+with the Willcox Lateral, Transporter will assess a Commission-approved L&U charge on the quantities supplied by the 
+third party.
+4/ The EPC charges are applicable to the quantity delivered by Transporter to Shipper and will be adjusted pursuant to Section 
+15 of the GT&C.
+30
+@@@PAGE 31@@@
+El Paso Natural Gas Company, L.L.C. Part II: Stmt. of Rates
+FERC Gas Tariff Section 4 - Footnotes
+Third Revised Volume No. 1A Version 15.0.0
+Issued on: September 30, 2025 Effective on: January 1, 2025
+STATEMENT OF RATES FOR TRANSPORTATION OF NATURAL GAS
+FOOTNOTES
+1/ Surcharge(s) shall be added as applicable.
+ 
+ACA:  Pursuant to Section 17 of the GT&C, the applicable ACA surcharge may be found on the 
+Commission website at http://www.ferc.gov.
+2/ The Willcox Lateral Line Facilities reservation and usage charges are applicable only to those 
+TSAs which provide for the assessment of these charges.  
+3/ Due to the reticulated nature of Transporter's system, there is no distinction between forward hauls 
+and backhauls for base rate purposes.  
+4/ Transporter has adopted the following NAESB Standard for capacity release transactions only.  
+Converting a daily rate to a monthly rate is accomplished by multiplying the daily rate times the 
+number of Days in the rate period, dividing the result by the number of Months in the rate period, 
+taking the remainder out to 5 decimal places, and rounding up or down to Transporter's specified 
+decimal place.  Converting a monthly rate to a daily rate is accomplished by multiplying the 
+monthly rate by the number of Months in the rate period, dividing the result by the number of Days 
+in the rate period, taking the remainder out to 5 decimal places, and rounding up or down to 
+Transporter's specified decimal place. (NAESB Standard 5.3.22) 
+5/ Shippers shall be billed using the monthly rate.  The minimum monthly reservation rate is zero. 
+6/ Shipper shall pay only one penalty/charge when Shipper's actions result in hourly scheduling 
+penalties, daily unauthorized overrun penalties, and/or Critical Condition charges.  Shipper shall 
+pay the highest of the hourly scheduling penalty pursuant to Section 14.1 of the GT&C, the daily 
+unauthorized overrun penalty, or the Critical Condition charge pursuant to Section 11.1 of the 
+GT&C ("higher-of-test").  When Shipper is also the DP Operator with an OPAS Agreement, 
+Section 4.4 of Rate Schedule OPAS will also apply to the determination of any applicable 
+penalties.
+7/ In the event Shipper is subject to a daily authorized overrun charge or a daily unauthorized overrun 
+penalty and has executed TSAs pursuant to various rate schedules and/or service options, such 
+daily overrun charge or penalty shall be assessed by multiplying the daily overrun quantity by the 
+weighted average 100% load factor rate under all such TSAs with the weighting based upon the 
+TCD of each TSA. 
+8/ The Tier 1 Service rates will be assessed only if the Article 11.2(a) rates listed in Section 37 of the 
+GT&C are not applicable.  Provisions for Tier 1 and Tier 2 Service are included in Rate Schedule 
+FT-2.
+31

@@ -1,0 +1,459 @@
+@@@PAGE 5@@@
+Kern River Gas Transmission Company Sheet No. 5
+FERC Tariff Version: 32.0.0
+Third Revised Volume No. 1 Superseding
+Version: 31.0.0
+Issued On: February 27, 2026 Effective On: April 1, 2026
+STATEMENT OF RATES 1/
+RATE SCHEDULE KRF-1
+FIRM ROLLED-IN RATE SERVICE 2/
+ORIGINAL SYSTEM/2002 EXPANSION PROJECT
+(RATES PER DTH)
+Base Tariff Rates 3/
+TRC 5/
+Recourse Rate:
+Daily Reservation/Demand Rate 4/
+Maximum $ 0.4734 $-0.0521
+ Minimum $ 0.0000
+10-Year Rate:
+Daily Reservation/Demand Rate 4/ 
+Maximum $ 0.4734 $-0.0521
+Minimum $ 0.0000
+15-Year Rate:
+Daily Reservation/Demand Rate 4/
+Maximum $ 0.3633 $-0.0400
+Minimum $ 0.0000
+Firm Transportation Commodity/Usage Rate:
+Maximum $ 0.0031
+Minimum $ 0.0031
+Authorized Overrun Rate:
+Maximum $ 0.4392 $-0.0483
+Minimum $ 0.0037
+1/ All costs included in rates are transmission costs.  Kern River provides no storage or gathering services.
+2/ Rates for incrementally-priced firm transportation under Rate Schedule KRF-1 for the 2003/2010 
+Expansion Project shippers are set out separately on Sheet No. 5A. 
+3/ Transportation rates set forth herein are exclusive of ACA Surcharges, which all Shippers must pay 
+pursuant to Section 5.4 of Rate Schedule KRF-1, and fuel used and lost and unaccounted-for gas, which all Shippers 
+must furnish in-kind each Day by applying a fuel reimbursement factor to Receipt Point nominations, pursuant to 
+Section 12 of the General Terms and Conditions.
+In addition, rolled-in rate shippers are subject to an electric compressor fuel surcharge for quantities scheduled for 
+delivery from any receipt point on Transporter’s wholly-owned system, or from the Dag Moj receipt point, to 
+delivery points downstream of the Daggett compressor station.  The surcharge is a credit of $0.0011/Dth for 
+quantities within contract demand and a credit of $0.0009/Dth for authorized overrun quantities.
+4/ All reservation rates are daily rates computed on the basis of 365 days per year, except that such rates for 
+leap years are computed on the basis of 366 days.
+5/ TRC is the Tax Reform Credit pursuant to Section 31 of the General Terms and Conditions.  Shippers 
+receiving service at the applicable Maximum Base Tariff Rate will receive the TRC.  Until a Triggering Event 
+occurs, the TRC will be a daily rate credit to the Reservation Charge and, if applicable, to the Authorized Overrun 
+Charge in the monthly billing invoice.
+@@@PAGE 6@@@
+Kern River Gas Transmission Company Sheet No. 5.01
+FERC Tariff Version: 17.0.0
+Third Revised Volume No. 1 Superseding
+Version: 16.0.0
+Issued On: November 22, 2024 Effective On: January 1, 2025
+STATEMENT OF RATES  1/
+RATE SCHEDULE KRF-1
+PERIOD TWO RATES/ALTERNATE PERIOD TWO RATES FOR FIRM ROLLED-IN RATE SERVICE 2/
+ORIGINAL SYSTEM/2002 EXPANSION PROJECT
+(RATES PER DTH)
+Base Tariff Rates 3/
+Period Two Reservation/Demand Rates
+Period Two
+  Insulated Period Two
+    Rates 5/          TRC 6/      Rates TRC 6/
+Period Two Reservation/Demand Rates Applicable to Former Period One 10-Year Rolled-in Rate Shippers:
+10-Year Period Two Rate:
+Daily Reservation/Demand Rate 4/
+Maximum $ 0.2720            $-0.0299 $ 0.2738               $-0.0301
+ Minimum $ 0.0000 $ 0.0000
+15-Year Period Two Rate: 
+Daily Reservation/Demand Rate 4/ 
+Maximum $ 0.2329            $-0.0256 $ 0.2347               $-0.0258
+Minimum $ 0.0000 $ 0.0000
+Period Two Reservation/Demand Rates Applicable to Former Period One 15-Year Rolled-in Rate Shippers:
+10-Year Period Two Rate:
+Daily Reservation/Demand Rate 4/
+Maximum $ 0.2298            $-0.0253 $ 0.2316               $-0.0255
+ Minimum $ 0.0000 $ 0.0000
+15-Year Period Two Rate: 
+Daily Reservation/Demand Rate 4/ 
+Maximum $ 0.1951            $-0.0215 $ 0.1969               $-0.0217
+Minimum $ 0.0000 $ 0.0000
+Alternate Period Two Reservation/Demand Rates
+Alternate Period Two Reservation/Demand Rate Applicable to Former Period One 10-Year Rolled-in Rate Shippers:
+25-Year Period Two Rate:
+Daily Reservation/Demand Rate 4/
+Maximum $ 0.2093              $-0.0230
+Minimum $ 0.0000
+Alternate Period Two Reservation/Demand Rate Applicable to Former Period One 15-Year Rolled-in Rate Shippers:
+25-Year Period Two Rate: 
+Daily Reservation/Demand Rate 4/ 
+Maximum $ 0.1742               $-0.0192
+Minimum $ 0.0000
+@@@PAGE 7@@@
+Kern River Gas Transmission Company Sheet No. 5.02
+FERC Tariff Version: 17.0.0
+Third Revised Volume No. 1 Superseding
+Version: 16.0.0
+Issued On: February 27, 2026 Effective On: April 1, 2026
+STATEMENT OF RATES  1/
+RATE SCHEDULE KRF-1
+PERIOD TWO RATES/ALTERNATE PERIOD TWO RATES FOR FIRM ROLLED-IN RATE SERVICE  2/
+ORIGINAL SYSTEM/2002 EXPANSION PROJECT
+(RATES PER DTH)
+(Continued)
+TRC 6/
+Other Rates
+Firm Transportation Commodity/Usage Rate:
+Maximum $ 0.0031
+Minimum $ 0.0031
+Authorized Overrun Rate:
+Maximum $ 0.4392               $-0.0483
+Minimum $ 0.0037
+1/ All costs included in rates are transmission costs.  Kern River provides no storage or gathering services.
+2/ The rates shown on this sheet are applicable to Shippers in accordance with Section 30 of the General 
+Terms and Conditions of this Tariff. 
+3/ Transportation rates set forth herein are exclusive of ACA Surcharges, which all Shippers must pay 
+pursuant to Section 5.4 of Rate Schedule KRF-1, and fuel used and lost and unaccounted-for gas, which all Shippers 
+must furnish in-kind each Day by applying a fuel reimbursement factor to receipt point nominations, pursuant to 
+Section 12 of the General Terms and Conditions.
+In addition, rolled-in rate shippers are subject to an electric compressor fuel surcharge for quantities scheduled for 
+delivery from any receipt point on Transporter’s wholly-owned system or from the Dag Moj receipt point to delivery 
+points downstream of the Daggett compressor station.  The surcharge is a credit of $0.0011/Dth for quantities within 
+contract demand and a credit of $0.0009/Dth for authorized overrun quantities.
+4/ All reservation rates are daily rates computed on the basis of 365 days per year, except that such rates for 
+leap years are computed on the basis of 366 days.
+5/ See Section 30.2(e) of the General Terms and Conditions of Transporter’s Tariff for eligibility regarding 
+Period Two Insulated Rates.
+6/ TRC is the Tax Reform Credit pursuant to Section 31 of the General Terms and Conditions. Shippers 
+receiving service at the applicable Maximum Base Tariff Rate will receive the TRC. Until a Triggering Event 
+occurs, the TRC will be a daily rate credit to the Reservation Charge and, if applicable, to the Authorized Overrun 
+Charge in the monthly billing invoice.
+@@@PAGE 8@@@
+Kern River Gas Transmission Company Sheet No. 5A
+FERC Tariff Version: 32.0.0
+Third Revised Volume No. 1 Superseding
+Version: 31.0.0
+Issued On: February 27, 2026 Effective On: April 1, 2026
+STATEMENT OF RATES 1/
+RATE SCHEDULE KRF-1
+FIRM INCREMENTAL RATE SERVICE
+2003/2010 EXPANSION PROJECTS
+(RATES PER DTH)
+Base Tariff Rates 2/
+TRC 4/
+Recourse Rate:
+Daily Reservation/Demand Rate 3/
+Maximum $ 0.5833 $-0.0642
+Minimum $ 0.0000
+10-Year Rate:
+Daily Reservation/Demand Rate 3/
+Maximum $ 0.5833 $-0.0642
+Minimum $ 0.0000
+15-Year Rate:
+Daily Reservation/Demand Rate 3/
+Maximum $ 0.4717 $-0.0519
+Minimum $ 0.0000
+Firm Transportation Commodity/Usage Rate: 
+Maximum $ 0.0044
+Minimum $ 0.0044
+Authorized Overrun Rate: 
+Maximum $ 0.4392 $-0.0483
+Minimum $ 0.0037
+1/ All costs included in rates are transmission costs.  Kern River provides no storage or gathering services.
+2/ Transportation rates set forth herein are exclusive of ACA Surcharges, which all Shippers must pay 
+pursuant to Section 5.4 of Rate Schedule KRF-1, and fuel used and lost and unaccounted-for gas, which all Shippers 
+must furnish in-kind each Day by applying a fuel reimbursement factor to Receipt Point nominations, pursuant to 
+Section 12 of the General Terms and Conditions.
+In addition, Shippers receiving firm incremental rate service on the 2003/2010 Expansion Projects are subject to an 
+electric compressor fuel surcharge for quantities scheduled for delivery from any receipt point on Transporter’s 
+wholly-owned system, or from the Dag Moj receipt point, to delivery points downstream of the Daggett compressor 
+station.  The surcharge is a credit of $0.0008/Dth for quantities within contract demand and a credit of $0.0009/Dth 
+for authorized overrun quantities.
+3/ All reservation rates are daily rates computed on the basis of 365 days per year, except that such rates for 
+leap years are computed on the basis of 366 days.
+4/ TRC is the Tax Reform Credit pursuant to Section 31 of the General Terms and Conditions. Shippers 
+receiving service at the applicable Maximum Base Tariff Rate will receive the TRC. Until a Triggering Event 
+occurs, the TRC will be a daily rate credit to the Reservation Charge and, if applicable, to the Authorized Overrun 
+Charge in the monthly billing invoice.
+@@@PAGE 9@@@
+Kern River Gas Transmission Company Sheet No. 5A.01
+FERC Tariff Version: 17.0.0
+Third Revised Volume No. 1 Superseding
+Version: 16.0.0
+Issued On: November 22, 2024 Effective On: January 1, 2025
+STATEMENT OF RATES 1/
+RATE SCHEDULE KRF-1
+FIRM INCREMENTAL RATE SERVICE
+PERIOD TWO RATES/ALTERNATE PERIOD TWO RATES FOR 2003/2010 EXPANSION PROJECTS 2/
+(RATES PER DTH)
+Base Tariff Rates 3/
+Period Two Reservation/Demand Rates      TRC 5/
+Period Two Reservation/Demand Rates Applicable to Former Period One 10-Year 2003/2010 Expansion Shippers:
+10-Year Period Two Rate:
+Daily Reservation/Demand Rate 4/
+Maximum $ 0.2565 $-0.0282
+Minimum $ 0.0000
+15-Year Period Two Rate:
+Daily Reservation/Demand Rate 4/ 
+Maximum $ 0.2238 $-0.0246
+Minimum $ 0.0000
+Period Two Reservation/Demand Rates Applicable to Former Period One 15-Year 2003 Expansion Shippers:
+10-Year Period Two Rate:
+Daily Reservation/Demand Rate 4/
+Maximum $ 0.2543 $-0.0280
+Minimum $ 0.0000
+15-Year Period Two Rate:
+Daily Reservation/Demand Rate 4/ 
+Maximum $ 0.2224 $-0.0245
+Minimum $ 0.0000
+                                                Alternate Period Two Reservation Demand Rates TRC 5/
+Alternate Period Two Reservation/Demand Rate Applicable to Former Period One 10-Year 2003/2010 Expansion 
+Shippers:
+25-Year Alternate Period Two Rate:
+Daily Reservation/Demand Rate 4/
+Maximum $ 0.2027 $-0.0223
+Minimum $ 0.0000
+Alternate Period Two Reservation/Demand Rate Applicable to Former Period One 15-Year 2003 Expansion 
+Shippers:
+25-Year Alternate Period Two Rate:
+Daily Reservation/Demand Rate 4/
+Maximum $ 0.2018 $-0.0222
+Minimum $ 0.0000
+@@@PAGE 10@@@
+Kern River Gas Transmission Company Sheet No. 5A.02
+FERC Tariff Version: 16.0.0
+Third Revised Volume No. 1 Superseding
+Fifteenth Revised Sheet No. 5A.02
+Issued On: February 27, 2026 Effective On: April 1, 2026
+STATEMENT OF RATES 1/
+RATE SCHEDULE KRF-1
+FIRM INCREMENTAL RATE SERVICE
+PERIOD TWO RATES/ALTERNATE PERIOD TWO RATES FOR 2003/2010 EXPANSION PROJECTS 2/
+(RATES PER DTH)
+Base Tariff Rates 3/ (continued)
+     TRC 5/
+Other Rates
+Firm Transportation Commodity/Usage Rate:
+Maximum $ 0.0044
+Minimum $ 0.0044
+Authorized Overrun Rate:
+Maximum $ 0.4392 $-0.0483
+Minimum $ 0.0037
+1/ All costs included in rates are transmission costs.  Kern River provides no storage or gathering services.
+2/ The rates shown on this sheet are applicable to Shippers in accordance with Section 30 of the General 
+Terms and Conditions of this Tariff. 
+3/ Transportation rates set forth herein are exclusive of ACA Surcharges, which all Shippers must pay 
+pursuant to Section 5.4 of Rate Schedule KRF-1, and fuel used and lost and unaccounted-for gas, which all Shippers 
+must furnish in-kind each Day by applying a fuel reimbursement factor to receipt point nominations, pursuant to 
+Section 12 of the General Terms and Conditions.
+In addition, 2003/2010 Expansion shippers are subject to an electric compressor fuel surcharge for quantities 
+scheduled for delivery from any receipt point on Transporter’s wholly-owned system or from the Dag Moj receipt 
+point to delivery points downstream of the Daggett compressor station.  The surcharge is a credit of $0.0008/Dth for 
+quantities within contract demand and a credit of $0.0009/Dth for authorized overrun quantities.
+4/ All reservation rates are daily rates computed on the basis of 365 days per year, except that such rates for 
+leap years are computed on the basis of 366 days.
+5/ TRC is the Tax Reform Credit pursuant to Section 31 of the General Terms and Conditions. Shippers 
+receiving service at the applicable Maximum Base Tariff Rate will receive the TRC. Until a Triggering Event 
+occurs, the TRC will be a daily rate credit to the Reservation Charge and, if applicable, to the Authorized Overrun 
+Charge in the monthly billing invoice.
+@@@PAGE 11@@@
+Kern River Gas Transmission Company Sheet No. 5B
+FERC Tariff Version: 26.0.0
+Third Revised Volume No. 1 Superseding
+Version: 25.0.0
+Issued On: February 27, 2026 Effective On: April 1, 2026
+STATEMENT OF RATES 1/
+RATE SCHEDULE KRF-1
+FIRM INCREMENTAL RATE SERVICE
+APEX EXPANSION PROJECT
+(RATES PER DTH)
+Base Tariff Rates 2/
+TRC 4/
+Recourse Rate:
+Daily Reservation/Demand Rate 3/
+Maximum $ 0.4444 $-0.0489
+Minimum $ 0.0000
+20-Year Rate: 
+Daily Reservation/Demand Rate 3/
+Maximum $ 0.4444 $-0.0489
+Minimum $ 0.0000
+Firm Transportation Commodity/Usage Rate: 
+Maximum $ 0.0044
+Minimum $ 0.0044
+Authorized Overrun Rate: 
+Maximum $ 0.4392 $-0.0483
+Minimum $ 0.0037
+1/ All costs included in rates are transmission costs.  Kern River provides no storage or gathering services.
+2/ Transportation rates set forth herein are exclusive of ACA Surcharges, which all Shippers must pay 
+pursuant to Section 5.4 of Rate Schedule KRF-1, and fuel used and lost and unaccounted-for gas, which all Shippers 
+must furnish in-kind each Day by applying a fuel reimbursement factor to Receipt Point nominations, pursuant to 
+Section 12 of the General Terms and Conditions.
+In addition, Shippers receiving firm incremental rate service on the Apex Expansion project are subject to an electric 
+compressor fuel surcharge for quantities scheduled for delivery from any receipt point on Transporter’s 
+wholly-owned system to delivery points downstream of the Daggett compressor station.  The surcharge is a credit of 
+$0.0008/Dth for quantities within contract demand and a credit of $0.0009/Dth for authorized overrun quantities.
+3/ All reservation rates are daily rates computed on the basis of 365 days per year, except that such rates for 
+leap years are computed on the basis of 366 days.
+4/ TRC is the Tax Reform Credit pursuant to Section 31 of the General Terms and Conditions. Shippers 
+receiving service at the applicable Maximum Base Tariff Rate will receive the TRC. Until a Triggering Event 
+occurs, the TRC will be a daily rate credit to the Reservation Charge and, if applicable, to the Authorized Overrun 
+Charge in the monthly billing invoice.
+@@@PAGE 12@@@
+Kern River Gas Transmission Company Sheet No. 6
+FERC Tariff Version: 28.0.0
+Third Revised Volume No. 1 Superseding
+Version: 27.0.0
+Issued On: February 27, 2026 Effective On: April 1, 2026
+STATEMENT OF RATES  1/
+RATE SCHEDULE KRI-1
+INTERRUPTIBLE SERVICE
+(RATES PER DTH)
+Base Tariff Rates 2/
+TRC 4/
+Interruptible Transportation Rate 3/
+Maximum $ 0.4392 $-0.0483
+Minimum $ 0.0037
+1/ All costs included in rates are transmission costs.  Kern River provides no storage or gathering services.
+2/ Transportation rates set forth herein are exclusive of ACA Surcharges, which all Shippers must pay 
+pursuant to Section 5.3 of Rate Schedule KRI-1, and fuel used and lost and unaccounted-for gas, which all Shippers 
+must furnish in-kind each Day by applying a fuel reimbursement factor to Receipt Point nominations, pursuant to 
+Section 12 of the General Terms and Conditions.
+In addition, quantities of Gas scheduled for delivery from any receipt point on Transporter's wholly-owned system, 
+or from the Dag Moj receipt point, to delivery points downstream of the Daggett compressor station on an 
+interruptible basis are subject to an electric compressor fuel surcharge credit of $0.0009/Dth. 
+3/ All reservation rates are daily rates computed on the basis of 365 days per year, except that such rates for 
+leap year are computed on the basis of 366 days.
+4/ TRC is the Tax Reform Credit pursuant to Section 31 of the General Terms and Conditions. Shippers 
+receiving service at the applicable Maximum Base Tariff Rate will receive the TRC. Until a Triggering Event 
+occurs, the TRC will be a daily rate credit to the Transportation Charge in the monthly billing invoice.
+@@@PAGE 13@@@
+Kern River Gas Transmission Company Sheet No. 7
+FERC Tariff Version: 15.0.0
+Third Revised Volume No. 1 Superseding
+Version: 14.0.0
+Issued On: November 22, 2024 Effective On: January 1, 2025
+STATEMENT OF RATES 1/
+RATE SCHEDULES KRF-L1 AND KRI-L1
+HIGH DESERT LATERAL SERVICE
+(RATES PER DTH)
+The rates shown below are those rates which Transporter is authorized to charge for service rendered under Rate 
+Schedules KRF-L1 and KRI-L1.
+Base Tariff Rates 2/
+TRC 4/, 5/
+KRF-L1 Recourse Rate:
+Daily Reservation/Demand Rate 3/:
+ 
+Maximum $ 0.0427 $-0.0047 4/
+Minimum $ 0.0000
+Firm Transportation Commodity/Usage Rate:
+ 
+Maximum $ 0.0000
+Minimum $ 0.0000
+Authorized Overrun Rate:
+ 
+Maximum $ 0.0427 $-0.0047 4/
+Minimum $ 0.0000
+KRI-L1 Recourse Rate:
+Interruptible Transportation Rate:
+ 
+Maximum $ 0.0427 $-0.0047 5/
+Minimum $ 0.0000
+1/ All costs included in rates are transmission costs.  Kern River provides no storage or gathering services.
+2/ Transportation rates set forth herein are exclusive of ACA Surcharges, which all Shippers must pay 
+pursuant to Section 5.4 of Rate Schedule KRF-L1 and Section 5.3 of Rate Schedule KRI-L1.
+3/ All reservation rates are daily rates computed on the basis of 365 days per year, except that such rates for 
+leap years are computed on the basis of 366 days.
+4/ TRC is the Tax Reform Credit pursuant to Section 31 of the General Terms and Conditions. Shippers 
+receiving service at the applicable Maximum Base Tariff Rate will receive the TRC. Until a Triggering Event 
+occurs, the TRC will be a daily rate credit to the Reservation Charge and, if applicable, to the Authorized Overrun 
+Charge in the monthly billing invoice.
+5/ TRC is the Tax Reform Credit pursuant to Section 31 of the General Terms and Conditions. Shippers 
+receiving service at the applicable Maximum Base Tariff Rate will receive the TRC. Until a Triggering Event 
+occurs, the TRC will be a daily rate credit to the Transportation Charge in the monthly billing invoice.
+@@@PAGE 14@@@
+Kern River Gas Transmission Company Sheet No. 8
+FERC Tariff Version: 12.0.0
+Third Revised Volume No. 1 Superseding
+Version: 11.0.0
+Issued On: November 22, 2024 Effective On: January 1, 2025
+STATEMENT OF RATES 1/
+RATE SCHEDULE PAL
+PARK AND LOAN SERVICE
+(RATES PER DTH)
+Base Tariff Rate
+TRC 3/
+Minimum Maximum
+Daily Rate 2/ $0.0000 $ 0.4392 $-0.0483
+1/ All costs included in rates are transmission costs.  Kern River provides no storage or gathering services.
+2/ All reservation rates are daily rates computed on the basis of 365 days per year, except that such rates for 
+leap years are computed on the basis of 366 days.
+3/ TRC is the Tax Reform Credit pursuant to Section 31 of the General Terms and Conditions. Shippers 
+receiving service at the applicable Maximum Base Tariff Rate will receive the TRC. Until a Triggering Event 
+occurs, the TRC will be a daily rate credit to the Daily Rate in the monthly billing invoice.
+@@@PAGE 15@@@
+Kern River Gas Transmission Company Sheet No. 9
+FERC Tariff Version: 8.0.0
+Third Revised Volume No. 1 Superseding
+Version: 7.0.0
+Issued On: November 22, 2024 Effective On: January 1, 2025
+STATEMENT OF RATES 1/
+RATE SCHEDULE KRF-PK
+FIRM PEAKING TRANSPORTATION SERVICE
+(RATES PER DTH)
+Base Tariff Rates 2/
+TRC 4/
+Daily Reservation/Demand Rate 3/
+Maximum Rate (Unadjusted) $ 0.5833 $-0.0642
+Minimum Rate $ 0.0000
+The Maximum Daily Reservation/Demand Rate for Rate Schedule KRF-PK shall be derived from the maximum 
+recourse rate applicable to firm, incremental rate service for the 2003/2010 Expansion Projects under Rate Schedule 
+KRF-1 as shown above, adjusted to reflect Shipper’s peak flow period, or PFP (the minimum number of hours 
+during which Shipper may take its full DMDQ), utilizing the following formula, with the result rounded to four 
+decimal places:
+KRF-PK = KRF-1 x (24/PFP)
+where: 
+KRF-PK = KRF-PK Reservation/Demand Rate
+KRF-1 = KRF-1 Maximum Recourse Reservation/Demand Rate for 2003/2010
+Expansion Projects
+24 = Number of Hours in a Day
+PFP = Peak Flow Period in Hours
+Firm Transportation Commodity/Usage Rate:
+Maximum $ 0.0044
+Minimum $ 0.0044
+Authorized Overrun Rate:
+Maximum $ 0.4392 $-0.0483
+Minimum $ 0.0037
+1/ All costs included in rates are transmission costs. Kern River provides no storage or gathering services.
+@@@PAGE 16@@@
+Kern River Gas Transmission Company Sheet No. 10
+FERC Tariff Version: 11.0.0
+Third Revised Volume No. 1 Superseding
+Version: 10.0.0
+Issued On: February 27, 2026 Effective On: April 1, 2026
+STATEMENT OF RATES 1/
+RATE SCHEDULE KRF-PK
+FIRM PEAKING SERVICE
+(RATES PER DTH)
+(Continued)
+2/ Transportation rates set forth herein are exclusive of ACA Surcharges, which all Shippers must pay 
+pursuant to Section 5.4 of Rate Schedule KRF-PK, and fuel used and lost and unaccounted-for gas, which all 
+Shippers must furnish in-kind each Day by applying a fuel reimbursement factor to Receipt Point nominations, 
+pursuant to Section 12 of the General Terms and Conditions of Transporter’s tariff.
+In addition, Shippers receiving firm peaking service are subject to an electric compressor fuel surcharge for 
+quantities scheduled for delivery from any receipt point on Transporter’s wholly-owned system, or from the 
+Dag Moj Receipt Point, to Delivery Points downstream of the Daggett compressor station. The surcharge is a credit 
+of $0.0008/Dth for quantities within contract demand and a credit of $0.0009/Dth for authorized overrun quantities.
+3/ All reservation rates are daily rates computed on the basis of 365 days per year, except that such rates for 
+leap years are computed on the basis of 366 days. 
+4/ TRC is the Tax Reform Credit pursuant to Section 31 of the General Terms and Conditions. Shippers 
+receiving service at a rate that is derived from the Maximum Base Tariff Rate will receive the TRC. Until a 
+Triggering Event occurs, the TRC will be a daily rate credit to the Reservation Charge and, if applicable, to the 
+Authorized Overrun Charge in the monthly billing invoice.
+@@@PAGE 17@@@
+Kern River Gas Transmission Company Sheet Nos. 11-14 
+FERC Tariff Version: 0.0.0 
+Third Revised Volume No. 1 
+Issued On: August 17, 2016 Effective On: September 17, 2016 
+(RESERVED FOR FUTURE USE) 

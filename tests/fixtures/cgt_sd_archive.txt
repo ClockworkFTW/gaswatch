@@ -1,0 +1,32 @@
+7/6/2026	7/5/2026	7/4/2026	
+Beginning Inventory	4,219	4,197	4,384	
+Ending Inventory	4,124	4,219	4,197	
+Inventory Change	-95	22	-187	
+Composite Temperature	66.7	67.7	70	
+On System Demand	1,478	1,207	1,186	
+SoCal Gas (KRS)	39	34	35	
+Southwest Gas	2	2	2	
+Kern River GT - HDL	70	27	0	
+Transmission Shrinkage	18	17	17	
+PG&E Storage	0	0	44	
+Wild Goose Storage	120	175	180	
+Central Valley Storage	0	0	50	
+Lodi Storage	5	74	97	
+Gill Ranch Storage	0	0	0	
+TOTAL SYSTEM DEMAND	1,732	1,535	1,611	
+Gas Transmission Northwest	1,292	1,151	1,166	
+Ruby	0	0	0	
+California Production	19	20	19	
+SoCal Gas (KRS)	-0	-0	-0	
+Kern River GT - HDL	-0	-0	-0	
+Kern River GT Daggett	11	12	11	
+Southern Trails	20	20	20	
+El Paso Natural Gas	97	118	124	
+Transwestern	23	23	23	
+PG&E Storage	130	130	59	
+Wild Goose Storage	-0	-0	-0	
+Central Valley Storage	29	-0	-0	
+Lodi Storage	-0	-0	-0	
+Gill Ranch Storage	16	82	-0	
+TOTAL SYSTEM SUPPLY	1,637	1,557	1,424	
+TOTAL CUSTOMER IMBALANCE	-87	-39	-76	

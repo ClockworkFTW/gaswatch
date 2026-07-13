@@ -1,0 +1,458 @@
+@@@PAGE 6@@@
+ 
+ 
+Gas Transmission Northwest LLC PART 4 
+FERC Gas Tariff STATEMENT OF RATES 
+Fourth Revised Volume No. 1-A v.2.0.0 Superseding v.1.0.0 
+Issued:  April 11, 2011 Docket No. RP11-1986-000 
+Effective:  April 4, 2011 Accepted:  May 4, 2011 
+ 
+ 
+STATEMENT OF RATES 
+ 
+@@@PAGE 7@@@
+Gas Transmission Northwest LLC PART 4.1
+FERC Gas Tariff 4.1 - Statement of Rates
+Fourth Revised Volume No. 1-A FTS-1, LFS-1, and FHS Rates
+v.24.0.0 
+Issued:  February 27, 2026 Docket No. RP23-1099-007
+Effective:  April 1, 2026 Accepted:  March 20, 2026
+STATEMENT OF EFFECTIVE RATES AND CHARGES FOR
+TRANSPORTATION OF NATURAL GAS 
+Rate Schedules FTS-1, LFS-1, and FHS
+For Rate Schedules FTS-1 and LFS-1:
+RESERVATION
+DAILY DAILY
+MILEAGE (a) NON-MILEAGE (b)          DELIVERY (c)            
+   (Dth-Mile) (Dth) (Dth-Mile)                
+Max. Min. Max. Min. Max. Min
+BASE 0.0003221 0.0000000 0.0254384 0.0000000 0.0000119 0.0000119
+STF (e) (e) 0.0000000 (e) 0.0000000 0.0000119 0.0000119
+EXTENSION CHARGES
+   MEDFORD
+    E-1 (f) 0.0013131 0.0000000 0.0114283 0.0000000 0.0000000 0.0000000
+    E-2 (h) 0.0029720 0.0000000 --- --- 0.0000000 0.0000000
+        (Diamond 1)
+    E-2 (h) 0.0011660 0.0000000 --- --- 0.0000000 0.0000000
+         (Diamond 2)
+   COYOTE SPRINGS
+     E-3 (i) 0.0017692 0.0000000 0.0041049 0.0000000 0.0000000 0.0000000
+    CARTY LATERAL
+     E-4 (p) --- --- 0.0892439 0.0000000 0.000000 0.0000000
+OVERRUN CHARGE (j)
+--- --- --- --- --- ---
+@@@PAGE 8@@@
+Gas Transmission Northwest LLC PART 4.1
+FERC Gas Tariff 4.1 - Statement of Rates
+Fourth Revised Volume No. 1-A FTS-1, LFS-1, and FHS Rates
+v.24.0.0 
+Issued:  February 27, 2026 Docket No. RP23-1099-007
+Effective:  April 1, 2026 Accepted:  March 20, 2026
+RESERVATION COMMODITY
+(Dth-Mile) (Dth-Mile)
+FUEL (d)
+      MAXIMUM FUEL AND LINE LOSS PERCENTAGE  --- 0.0050%
+ 
+      FUEL AND LINE LOSS PERCENTAGE SURCHARGE --- 0.0000%
+SURCHARGES
+    ACA (k)
+For Rate Schedule FHS:
+The Mainline and Extension Reservation rates shown above for Rate Schedules FTS-1 and 
+LFS-1 shall also be applicable to service under Rate Schedule FHS, except that the Mileage and 
+Non-Mileage Components shall be adjusted to reflect the expedited hours of gas flow (“HF”) 
+utilizing the following formulas, rounded to 7 decimal places:
+(a) Mileage Reservation Component = FTS-1M x Miles x (24/HF)
+(b) Non-Mileage Reservation Component = FTS-1NM x (24/HF)
+where:
+FTS-1M = Applicable FTS-1 Mileage Reservation Charge
+FTS-1NM = Applicable FTS-1 Non-Mileage Reservation Charge
+Miles = Distance, in pipeline miles, from the Primary Point(s) 
+of Receipt to the Primary Point(s) of Delivery as set 
+forth in Shipper’s Contract
+HF = MDQ/MHQ
+@@@PAGE 9@@@
+Gas Transmission Northwest LLC PART 4.2
+FERC Gas Tariff 4.2 - Statement of Rates
+Fourth Revised Volume No. 1-A ITS-1 and IHS Rates
+v.15.0.0 
+Issued:  February 27, 2026 Docket No. RP23-1099-007
+Effective:  April 1, 2026 Accepted:  March 20, 2026
+STATEMENT OF EFFECTIVE RATES AND CHARGES FOR
+TRANSPORTATION OF NATURAL GAS (a)
+Rate Schedule ITS-1
+MILEAGE (n) NON-MILEAGE (o) DELIVERY (c)
+(Dth-Mile) (Dth) (Dth-Mile)
+Max. Min. Max. Min. Max. Min.
+BASE (e) 0.0000000 (e) 0.0000000 0.0000119 0.0000119
+EXTENSION CHARGES
+  MEDFORD
+    E-1 (Medford) (f) 0.0013131 0.0000000 0.0114283 0.000000 0.0000000 0.0000000
+  COYOTE SPRINGS
+   E-3 (Coyote Springs)
+   (i) 0.0017692 0.0000000 0.0041049 0.0000000 0.0000000 0.0000000
+  CARTY LATERAL
+   E-4 (Carty Lateral (p) --- --- 0.0892439 0.0000000 0.0000000 0.000000
+RESERVATION COMMODITY
+(Dth-Mile) Dth-Mile
+FUEL (d)
+   MAXIMUM FUEL AND LINE LOSS PERCENTAGE --- 0.0050%
+   
+   FUEL AND LINE LOSS PERCENTAGE SURCHARGE --- 0.0000%
+SURCHARGES
+   ACA (k)
+@@@PAGE 10@@@
+Gas Transmission Northwest LLC PART 4.2
+FERC Gas Tariff 4.2 - Statement of Rates
+Fourth Revised Volume No. 1-A ITS-1 and IHS Rates
+v.15.0.0 
+Issued:  February 27, 2026 Docket No. RP23-1099-007
+Effective:  April 1, 2026 Accepted:  March 20, 2026
+Rate Schedule IHS
+MILEAGE (n) NON-MILEAGE (o) DELIVERY (c)
+(Dth-Mile) (Dth) (Dth-Mile)
+Max. Min. Max. Min. Max. Min.
+BASE (e) 0.0000000 (e) 0.0000000 0.0000119 0.0000119
+EXTENSION CHARGES
+  MEDFORD
+    E-1 (Medford) (f) 0.0031514 0.0000000 0.0274279 0.0000000 0.0000000 0.0000000
+  COYOTE SPRINGS
+   E-3 (Coyote Springs)
+   (i) 0.0042461 0.0000000 0.0098518 0.0000000 0.0000000 0.0000000
+  CARTY LATERAL
+   E-4 (Carty Lateral (p) --- --- 0.2141854 0.0000000 0.0000000 0.0000000
+RESERVATION COMMODITY
+(Dth-Mile) Dth-Mile
+FUEL (d)
+   FUEL AND LINE LOSS PERCENTAGE --- 0.0050%
+   
+   FUEL AND LINE LOSS PERCENTAGE SURCHARGE --- 0.0000%
+SURCHARGES
+   ACA (k)
+@@@PAGE 11@@@
+Gas Transmission Northwest LLC PART 4.3
+FERC Gas Tariff 4.3 - Statement of Rates
+Fourth Revised Volume No. 1-A Footnotes to Statement of Effective Rates and Charges
+v.22.0.0 
+Issued:  February 27, 2026 Docket No. RP23-1099-007
+Effective:  April 1, 2026 Accepted:  March 20, 2026
+STATEMENT OF EFFECTIVE RATES AND CHARGES
+FOR TRANSPORTATION OF NATURAL GAS
+Notes:
+(a) The mileage component shall be applied per pipeline mile to gas transported by GTN for 
+delivery to shipper based on the primary receipt and delivery points in Shipper's contract.  
+Consult GTN's system map in Section 3 for receipt and delivery point and milepost 
+designations.
+(b) The non-mileage component is applied per Shipper's MDQ at Primary Point(s) of Delivery 
+on Mainline Facilities.
+(c) The delivery rates are applied per pipeline mile to gas transported by GTN for delivery to 
+shipper based on distance of gas transported.  Consult GTN's system map in Section 3 for 
+receipt and delivery point and milepost designations.
+(d) Fuel Use:  Shipper shall furnish gas used for compressor station fuel, line loss, and other 
+utility purposes, plus other unaccounted-for gas used in the operation of GTN's combined 
+pipeline system in an amount equal to the sum of the current fuel and line loss percentage 
+and the fuel and line loss percentage surcharge in accordance with Section 6.38 of this 
+Tariff, multiplied by the distance in pipeline miles transported from the receipt point to the 
+delivery point multiplied by the transportation quantities of gas received from Shipper 
+under these rate schedules.  The current fuel and line loss percentage shall be adjusted each 
+month between the maximum currently effective rate set forth in Section 4.1 and Section 
+4.2 and the minimum rate of 0.0000% per Dth per mile.  No fuel use charges will be 
+assessed for backhaul service.  Currently effective fuel charges may be found on GTN's 
+Internet website under "Informational Postings."
+(e) Seasonal recourse rates apply to short-term firm (STF) service under Rate Schedules FTS-1 
+and FHS (i.e., firm service that has a term of less than one year and that does not include 
+multiple-year seasonal service) and IT Service under Rate Schedules ITS-1 and IHS.  By 
+March 1 of each year GTN may designate up to four (4) months as peak months during a 
+twelve (12) month period beginning on June 1 of the same year through May 31 of the 
+following year.  All other months will be considered off-peak months.  Reservation rate 
+components that apply to STF service and per-unit-rate ITS-1 and IHS service are as 
+follows (delivery charges and applicable surcharges continue to apply):
+@@@PAGE 12@@@
+Gas Transmission Northwest LLC PART 4.3
+FERC Gas Tariff 4.3 - Statement of Rates
+Fourth Revised Volume No. 1-A Footnotes to Statement of Effective Rates and Charges
+v.22.0.0 
+Issued:  February 27, 2026 Docket No. RP23-1099-007
+Effective:  April 1, 2026 Accepted:  March 20, 2026
+For STF and ITS-1:
+4 Peak 3 Peak 2 Peak 1 Peak 0 Peak
+Mos. Mos. Mos. Mo. Mos.
+Peak NM Res. $0.0483330  $0.0483330 $0.0483330 $0.0483330 $0.0254384
+Peak Mi. Res. $0.0006120 $0.0006120 $0.0006120 $0.0006120 $0.0003221
+Off-Pk NM Res. $0.0139911 $0.0178069 $0.0208595 $0.0233571 $0.0254384
+Off-Pk Mi. Res. $0.0001772 $0.0002255 $0.0002641 $0.0002957 $0.0003221
+For IHS:
+4 Peak 3 Peak 2 Peak 1 Peak 0 Peak
+Mos. Mos. Mos. Mo. Mos.
+Peak NM Res. $0.1159992 $0.1159992 $0.1159992 $0.1159992 $0.0610522
+Peak Mi. Res. $0.0014688 $0.0014688 $0.0014688 $0.0014688  $0.0007730
+Off-Pk NM Res. $0.0335786 $0.0427366 $0.0500628 $0.0560570 $0.0610522
+Off-Pk Mi. Res. $0.0004253 $0.0005412 $0.0006338 $0.0007097 $0.0007730
+Months currently designated as "Peak Months" may be found on GTN's Internet website 
+under "Informational Postings."  By March 1 of each year, GTN will post the Peak Months 
+for the upcoming twelve-month period beginning June 1 of the same year.
+(f) Applicable to firm service on GTN's Medford Extension.
+(g) Reserved for Future Use.
+(h) E-2 (Diamond 1) is a Negotiated Rate consisting of a reservation charge of $0.002972 per 
+Dth per day for the first 45,000 Dth/d and E-2 (Diamond 2) is a Negotiated Rate consisting 
+of a reservation charge of $0.001166 per Dth per day for the second 45,000 Dth/d.  During 
+leap years, E-2 (Diamond 1) is a Negotiated Rate consisting of a reservation charge of 
+$0.002964 per Dth per day for the first 45,000 Dth/d and E-2 (Diamond 2) is a Negotiated 
+Rate consisting of a reservation charge of $0.001163 per Dth per day for the second 45,000 
+Dth/d. Pursuant to Article VI, Subsections B and C of the Amended Stipulation and 
+Agreement filed with the Commission on October 16, 2018, in Docket No. RP15-904-001, 
+and as accepted by Order of the Commission dated November 30, 2018, the Diamond 1 and 
+Diamond 2 Negotiated Rates in Section 4.1, above, shall be modified as follows: 1) from 
+January 1, 2019, through December 31, 2019, and January 1, 2021 through December 31, 
+2021, the Diamond 1 reservation charge shall be $0.002823 and the Diamond 2 reservation 
+charge shall be $0.001108; 2) from January 1, 2020, through December 31, 2020, the 
+Diamond 1 reservation charge shall be $0.002816 and the Diamond 2 reservation charge 
+shall be $0.001105. 
+(i) Applicable to firm service on GTN's Coyote Springs Extension.
+@@@PAGE 13@@@
+Gas Transmission Northwest LLC PART 4.3
+FERC Gas Tariff 4.3 - Statement of Rates
+Fourth Revised Volume No. 1-A Footnotes to Statement of Effective Rates and Charges
+v.22.0.0 
+Issued:  February 27, 2026 Docket No. RP23-1099-007
+Effective:  April 1, 2026 Accepted:  March 20, 2026
+(j) The Overrun Charge shall be equal to the rates and charges set forth for interruptible service 
+under Rate Schedule ITS-1.
+(k) In accordance with Section 6.22 of the Transportation General Terms and Conditions of this 
+FERC Gas Tariff, Fourth Revised Volume No. 1-A, all Transportation services that involve 
+the physical movement of gas shall pay an ACA unit adjustment.  The currently effective 
+ACA unit adjustment as published on the Commission’s website ( www.ferc.gov) is 
+incorporated herein by reference.  This adjustment shall be in addition to the Base Tariff 
+Rate(s) specified above.
+(l) Reserved for Future Use.
+(m) Reserved for Future Use.
+(n) The Rate Schedule ITS-1 Mileage Component shall be applied per pipeline mile to gas 
+transported by GTN based on the distance of gas transported.  Consult GTN's system map 
+in Section 3 for receipt and delivery point and milepost designations.
+(o) The Rate Schedule ITS-1 Non-Mileage Component shall be applied per Dth of gas 
+transported by GTN for immediate delivery to the facilities of another entity or an extension 
+facility.
+(p) Applicable to firm service on GTN’s Carty Lateral Extension.
+@@@PAGE 14@@@
+ 
+ 
+Gas Transmission Northwest LLC PART 4.4 
+FERC Gas Tariff 4.4 - Statement of Rates 
+Fourth Revised Volume No. 1-A Reserved For Future Use 
+ v.3.0.0 Superseding v.2.0.0 
+Issued:  May 26, 2011 Docket No. RP11-2132-000 
+Effective:  June 27, 2011 Accepted:  June 10, 2011 
+ 
+ 
+RESERVED FOR FUTURE USE 
+ 
+ 
+@@@PAGE 15@@@
+Gas Transmission Northwest LLC PART 4.5
+FERC Gas Tariff 4.5 - Statement of Rates
+Fourth Revised Volume No. 1-A Parking and Lending Service
+v.13.0.0 
+Issued:  February 27, 2026 Docket No. RP23-1099-007
+Effective:  April 1, 2026 Accepted:  March 20, 2026
+STATEMENT OF EFFECTIVE RATES AND CHARGES
+FOR TRANSPORTATION OF NATURAL GAS FOR
+Parking and Lending Service
+($/Dth)
+BASE TARIFF RATE
+MINIMUM MAXIMUM
+PAL Parking and Lending Service (a): 0.0 0.2300000/d
+Notes:
+(a)Applicable to both PAL Service and ATPL enhancement option as defined in Section 5.2.2.
+@@@PAGE 16@@@
+Gas Transmission Northwest LLC PART 4.6
+FERC Gas Tariff 4.6 - Statement of Rates
+Fourth Revised Volume No. 1-A Negotiated Rate Agreements - FTS-1 and LFS-1
+v.19.0.0 Superseding v.18.0.0
+Issued:  May 26, 2026 Docket No. RP26-865-000
+Effective:  June 1, 2026 Accepted:  June 16, 2026
+STATEMENT OF EFFECTIVE RATES AND CHARGES
+FOR TRANSPORTATION OF NATURAL GAS
+NEGOTIATED RATE AGREEMENTS UNDER RATE SCHEDULES FTS-1 AND LFS-1
+PRIMARY PRIMARY
+      SHIPPER TERM OF RATE RECEIPT DELIVERY RATE
+(CONTRACT NO.) CONTRACT SCHEDULE DTH/D POINT POINT /2 /3
+ARC Resources U.S. 06/01/20 FTS-1 66,020 Kingsgate Malin /8
+Corp (18377) 05/31/35
+CanNat Energy Inc 07/01/20 FTS-1 54,658 Kingsgate Malin /9
+(18362) 06/30/35
+Intermountain Gas 07/01/20 FTS-1 5,000 Kingsgate Malin /9
+Company (19869) 06/30/36
+Murphy Oil Company 07/01/20 FTS-1 52,760 Kingsgate Malin /9
+(18538) 06/30/35
+ARC Resources Ltd. 07/01/20 FTS-1 23,000 Kingsgate Malin /9
+(18564) 06/30/35
+Whitecap U.S. 07/01/20 FTS-1 7,600 Kingsgate Malin /10
+Corporation (18683) 03/31/36
+ARC Resources U.S 11/1/2019 FTS-1 11,063 Kingsgate Malin /11
+Corp. (18376) 10/31/2034
+Intermountain Gas 11/01/20 FTS-1 15,109 Kingsgate Malin /12
+Company (19881) 05/31/35
+Tourmaline Oil 03/17/23 FTS-1 100,000 Kingsgate Malin /13
+Marketing Corp. 03/16/57
+(20183)
+Cascade Natural 12/13/24 FTS-1 20,000 Kingsgate Malin /14
+Gas Corporation 1/12/56
+(20780)
+Intermountain Gas 12/13/24 FTS-1 79,000 Kingsgate Malin /14
+Company (20181) 1/12/55
+Tourmaline Oil 12/13/24 FTS-1 51,000 Kingsgate Malin /14
+Marketing Corp. 12/12/57
+(20184)
+@@@PAGE 17@@@
+Gas Transmission Northwest LLC PART 4.6
+FERC Gas Tariff 4.6 - Statement of Rates
+Fourth Revised Volume No. 1-A Negotiated Rate Agreements - FTS-1 and LFS-1
+v.19.0.0 Superseding v.18.0.0
+Issued:  May 26, 2026 Docket No. RP26-865-000
+Effective:  June 1, 2026 Accepted:  June 16, 2026
+Southern California 04/01/08 FTS-1 52,508 Kingsgate Malin /15
+Gas, A California 10/31/38
+Corporation (10577)
+Castleton  11/01/20 FTS-1 11,755 Kingsgate Malin /16
+Commodities Merchant10/31/38
+Trading L.P. (19970)
+@@@PAGE 18@@@
+Gas Transmission Northwest LLC PART 4.7
+FERC Gas Tariff 4.7 - Statement of Rates
+Fourth Revised Volume No. 1-A Footnotes for Negotiated Rates - FTS-1 and LFS-1
+v.19.0.0 Superseding v.18.0.0
+Issued:  May 26, 2026 Docket No. RP26-865-000
+Effective:  June 1, 2026 Accepted:  June 16, 2026
+STATEMENT OF EFFECTIVE RATES AND CHARGES
+FOR TRANSPORTATION OF NATURAL GAS
+Negotiated Rate Agreements Under Rate Schedules FTS-1 and LFS-1
+Explanatory Footnotes for Negotiated Rates
+under Rate Schedules FTS-1 and LFS-1
+/1 This contract does not deviate in any material aspect from the Form of Service Agreement 
+in this Tariff.
+/2 Unless otherwise noted, all Shippers pay GTN's maximum Reservation Charge, Delivery 
+Charge, ACA, and contribute fuel in-kind in accordance with this Tariff.
+/3 Index Price References:  Unless otherwise noted, references to "Daily Index Price" shall 
+mean the price survey midpoint for the specified point as published in Gas Daily for the 
+day of gas flow.  Weekend and holiday prices will be determined using the next available 
+Gas Daily publication.  Unless otherwise noted, the references to the "NGI FOM" for a 
+specified point shall mean Natural Gas Intelligence's First of Month Bid Week Survey 
+(Supplement to NGI's Weekly Gas Index) Spot Gas Price for the specified point.
+/4 a.  GTN and Shipper have agreed to a fixed reservation charge of $.2565 along with 
+applicable surcharges for all quantities on the Kingsgate to Malin path.
+b.  Effective the earlier of January 1, 2022, or the termination of the Amended Settlement 
+in Docket No. RP15-904-001, the Rate Reduction shall expire and the negotiated rate shall 
+revert to $.27 along with applicable surcharges for all quantities on the Kingsgate to Malin 
+path.
+/5 Reserved
+/6 Reserved 
+/7 The Reservation charge shall be equal to the rate set forth in GTN's FERC Gas Tariff 
+identified as FTS-1 E-2 (WWP), or its successor, multiplied by the appropriate Effective 
+Period Percentage as shown in the following table.
+Effective Period Percentage
+11/1/01-10/31/02 75%
+11/1/02-10/31/03 80%
+11/1/03-10/31/04 85%
+11/1/04-10/31/05 90%
+11/1/05-10/31/06 95%
+11/1/06-10/31/25 100%
+@@@PAGE 19@@@
+Gas Transmission Northwest LLC PART 4.7
+FERC Gas Tariff 4.7 - Statement of Rates
+Fourth Revised Volume No. 1-A Footnotes for Negotiated Rates - FTS-1 and LFS-1
+v.19.0.0 Superseding v.18.0.0
+Issued:  May 26, 2026 Docket No. RP26-865-000
+Effective:  June 1, 2026 Accepted:  June 16, 2026
+The Daily Delivery Charge shall be equal to the 100% load factor equivalent of the FTS-1 
+E-2 rate, or its successor, and shall be multiplied by the positive difference between (a) 
+volumes delivered and (b) the contract MDQ times the appropriate Effective Period 
+Percentage.
+Daily Delivery Charge = [Dth Delivered - (MDQ * Effective Period %)] * 100% Load 
+Factor Equivalent FTS-1 E-2
+/8 Effective November 1, 2020 continuing until May 31, 2035, GTN and Shipper have agreed 
+to a fixed reservation charge of $0.2500 along with applicable surcharges for all quantities 
+on the Kingsgate to Malin path.
+/9 a. GTN and Shipper have agreed to a fixed reservation charge of $0.2375 along with 
+applicable surcharges for all quantities on the Kingsgate to Malin path.
+b. Effective the earlier of January 1, 2022, or the termination of the Amended Settlement in 
+Docket No. RP15-904-001, the negotiated rate for all quantities on the Kingsgate to Malin 
+path shall be a fixed Reservation Charge of $0.2500 along with applicable surcharges.
+/10 a. GTN and Shipper have agreed to a fixed Reservation Charge of $0.2470 along with 
+applicable surcharges for all quantities on the Kingsgate to Malin path.
+b. Effective the earlier of January 1, 2022, or the termination of the Amended Settlement in 
+Docket No. RP15-904-001, the negotiated rate for all quantities on the Kingsgate to Malin 
+path shall be a fixed Reservation Charge of $0.2600 along with applicable surcharges.
+/11 a. Effective November 1, 2019 continuing until December 31, 2021, GTN and Shipper 
+have agreed to a fixed reservation charge of $0.2375 along with applicable surcharges for 
+all quantities on the Kingsgate to Malin path.
+b. Effective the earlier of January 1, 2022, or the termination of the Amended Settlement in 
+Docket No. RP15-904-001, the negotiated rate for all quantities on the Kingsgate to Malin 
+path shall be a fixed Reservation Charge of $0.2500 along with applicable surcharges.
+/12 a. Effective November 1, 2020 continuing until December 31, 2021, GTN and Shipper 
+have agreed to a fixed reservation charge of $0.2375 along with applicable surcharges for 
+all quantities on the Kingsgate to Malin path.
+b. Effective January 1, 2022 and continuing until May 31. 2035, the negotiated rate for all 
+quantities on the Kingsgate to Malin path shall be a fixed Reservation Charge of $0.2500 
+along with applicable surcharges.
+/13 Effective March 17, 2023 and continuing until March 16, 2057, GTN and Shipper have 
+@@@PAGE 20@@@
+Gas Transmission Northwest LLC PART 4.7
+FERC Gas Tariff 4.7 - Statement of Rates
+Fourth Revised Volume No. 1-A Footnotes for Negotiated Rates - FTS-1 and LFS-1
+v.19.0.0 Superseding v.18.0.0
+Issued:  May 26, 2026 Docket No. RP26-865-000
+Effective:  June 1, 2026 Accepted:  June 16, 2026
+agreed to a fixed reservation charge of $0.2800 along with applicable surcharges for all 
+quantities on the Kingsgate to Malin path.
+/14 Effective December 13, 2024, GTN and Shipper have agreed that Shipper shall pay a 
+Negotiated Demand Rate equal to $0.31 per dekatherm along with the maximum applicable 
+system commodity rate and all applicable maximum reservation and commodity 
+surcharges.
+/15 Effective April 1, 2026, GTN and Shipper have agreed that Shipper shall pay a fixed 
+Reservation charge of $0.28 along with applicable surcharges for all quantities on the 
+Kingsgate to Malin path.
+/16 Effective June 1, 2026 through October 31, 2028, GTN and Shipper have agreed that 
+Shipper shall pay a fixed Reservation charge of $0.30500 along with applicable surcharges 
+for all quantities on the Kingsgate to Malin path.
+/17 Reserved
+/18 Reserved
+@@@PAGE 21@@@
+Gas Transmission Northwest LLC PART 4.8
+FERC Gas Tariff 4.8 - Statement of Rates
+Fourth Revised Volume No. 1-A Negotiated Rate Agreements - ITS-1 and PAL
+v.6.0.0 Superseding v.5.0.0
+Issued:  February 10, 2026 Docket No. RP26-478-000
+Effective:  March 15, 2026 Accepted:  March 6, 2026
+STATEMENT OF EFFECTIVE RATES AND CHARGES
+FOR TRANSPORTATION OF NATURAL GAS
+NEGOTIATED RATE AGREEMENTS UNDER RATE SCHEDULE ITS-1 AND PAL
+PRIMARY PRIMARY
+TERM OF RATE RECEIPT DELIVERY RATE
+SHIPPER CONTRACT SCHEDULE DTH/D POINT POINT
+@@@PAGE 22@@@
+Gas Transmission Northwest LLC PART 4.9
+FERC Gas Tariff 4.9 - Statement of Rates
+Fourth Revised Volume No. 1-A Footnotes for Negotiated Rates - ITS-1 and PAL
+v.6.0.0 Superseding v.5.0.0
+Issued:  February 10, 2026 Docket No. RP26-478-000
+Effective:  March 15, 2026 Accepted:  March 6, 2026
+STATEMENT OF EFFECTIVE RATES AND CHARGES
+FOR TRANSPORTATION OF NATURAL GAS
+NEGOTIATED RATE AGREEMENTS UNDER RATE SCHEDULE ITS-1 AND PAL
+Explanatory Footnotes for Negotiated Rates under Rate Schedule ITS-1 and PAL
+/
+@@@PAGE 23@@@
+Gas Transmission Northwest LLC PART 4.10
+FERC Gas Tariff 4.10 - Statement of Rates
+Fourth Revised Volume No. 1-A Non-Conforming Service Agreements
+v.7.0.0 Superseding v.6.0.0
+Issued:  February 27, 2026 Docket No. RP26-556-000
+Effective:  April 1, 2026 Accepted:  March 24, 2026
+NON-CONFORMING SERVICE AGREEMENTS
+PURSUANT TO § 154.112(b)
+Contract Rate Effective Termination
+Name of Shipper Number Schedule Date Date
+Portland General Electric Company 17293 FTS-1 10/31/2015 10/31/2045
+Cascade Natural Gas Corporation 20180 FTS-1 12/13/2024 1/12/2056
+Intermountain Gas Company 20181 FTS-1 12/13/2024 1/12/2055
+Tourmaline Oil Marketing Corp. 20184 FTS-1 12/13/2024 12/12/2057
+Southern California Gas, A California Corp. 10577 FTS-1 04/01/2008 10/31/2038

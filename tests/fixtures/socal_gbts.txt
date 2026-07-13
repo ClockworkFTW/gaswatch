@@ -1,0 +1,573 @@
+@@@PAGE 0@@@
+SOUTHERN CALIFORNIA GAS COMPANY Revised CAL. P.U.C. SHEET NO. 58998-G 
+ LOS ANGELES, CALIFORNIA CANCELING Revised CAL. P.U.C. SHEET NO. 56477-G 
+      
+ Schedule No. G-BTS Sheet 1  
+ BACKBONE TRANSPORTATION SERVICE  
+   
+ 
+ (Continued)   
+(TO BE INSERTED BY UTILITY) ISSU ED BY (TO BE INSERTED BY CAL. P UC) 
+ADVICE LETTER NO. 5845 Dan Skopec SUBMITTED Jul 21, 2021 
+DECISION NO.  Vice President EFFECTIVE Aug 20, 2021 
+1C11 Regulatory Affairs RESOLUTION NO.   
+ 
+APPLICABILITY 
+ 
+Applicable to firm and interruptible Backbone Transportation Service to Utility’s transmission system.  
+Service under this Schedule is available to any creditworthy party.  All eligible participants are 
+collectively referred to herein as “customers” unless otherwise specified. 
+ 
+Backbone Transportation Service rights to Utility’s transmission system neither guarantee nor imply 
+firm service on Utility’s local transmission/distribution system; such service is defined by the end-use 
+customers’ applicable Utility transportation service agreement. 
+ 
+TERRITORY 
+ 
+Applicable throughout the service territory.   
+ 
+RECEIPT POINTS 
+ 
+Receipt Points available for service under this schedule are as follows: 
+ 
+ Total Transmission  
+ Zone Firm Access  Specific Points of Access 
+Transmission Zone        (MMcfd)                      (MMcfd)*              
+ 
+Southern 1210 EPN Ehrenberg - 1210 
+  TGN Otay Mesa - 400 
+  NBP Blythe - 600 
+        California Supply Southern - N/A** 
+Northern 1590 TW North Needles - 800 
+  TW Topock - 300 
+  EPN Topock - 540 
+  KR/MP Kramer Junction - 550 
+California Supply Northern - N/A** 
+Wheeler  765 KR/MP Wheeler Ridge - 765 
+  PG&E Kern River Station - 520  
+  OEHI Gosford - 150 
+California Supply Wheeler Ridge - N/A** 
+Line 85 60 California Supply 
+Coastal 150 California Supply  
+Other N/A** California Supply 
+Total 3,775  
+ 
+* Any interstate pipeline, LNG Supplier or PG&E that interconnect through a new receipt point may 
+be added to that Transmission Zone.  
+** Capacity is posted on SoCalGas’ Electronic Bulletin Board. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+N 
+ 
+ 
+ 
+ 
+N 
+ 
+ 
+ 
+N 
+ 
+ 
+N 
+ 
+ 
+ 
+ 
+N 
+ 
+@@@PAGE 1@@@
+SOUTHERN CALIFORNIA GAS COMPANY Revised CAL. P.U.C. SHEET NO. 56478-G
+ LOS ANGELES, CALIFORNIA CANCELING Revised CAL. P.U.C. SHEET NO. 47349-G
+     
+ Schedule No. G-BTS Sheet 2
+ BACKBONE TRANSPORTATION SERVICE
+ 
+(Continued) 
+ (Continued)   
+(TO BE INSERTED BY UTILITY) ISSUED BY (TO BE INSERTED BY CAL. PUC) 
+ADVICE LETTER NO. 5493 Dan Skopec SUBMITTED Jul 10, 2019
+DECISION NO.  Vice President EFFECTIVE Aug 9, 2019
+2C5 Regulatory Affairs RESOLUTION NO.   
+ 
+RECEIPT POINTS  (Continued) 
+ 
+EPN – El Paso Natural Gas Pipeline 
+TGN – Transportadora de Gas Natural de Baja California 
+NBP – North Baja Pipeline  
+TW – Transwestern Pipeline 
+MP – Mojave Pipeline 
+KR – Kern River Pipeline 
+PG&E – Pacific Gas and Electric 
+OEHI – Occidental of Elk Hills 
+ 
+Transmission Zone Contract Limitations:  
+ 
+Southern Zone – In total EPN Ehrenberg and NBP Blythe cannot exceed 1210 MMcfd. 
+Southern Zone – In total EPN Ehrenberg, NBP Blythe and TGN Otay Mesa cannot exceed 1210 
+ MMcfd. 
+Northern Zone – In total TW at Topock and EPN at Topock cannot exceed 540 MMcfd. 
+Northern Zone – TW at North Needles cannot exceed 800 MMcfd. 
+Northern Zone – In total TW North Needles, TW Topock, EPN Topock, and KR/MP 
+Kramer Junction cannot exceed 1590 MMcfd. 
+Wheeler Ridge Zone – In total PG&E at Kern River Station and OEHI at Gosford cannot 
+exceed 520 MMcfd. 
+Wheeler Ridge Zone – In total PG&E Kern River Station, OEHI Gosford, and KR/MP 
+Wheeler Ridge cannot exceed 765 MMcfd.  
+ 
+DELIVERY POINTS 
+ 
+Delivery Points available for service under this schedule are:  
+ 
+1. End-User’s Local Transportation Agreement 
+2. Citygate Pool Account 
+3. Storage Account 
+4. Contracted Marketer or Core Aggregator Transportation Account 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+D 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+T,D 
+D 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+@@@PAGE 2@@@
+SOUTHERN CALIFORNIA GAS COMPANY Revised CAL. P.U.C. SHEET NO. 64162-G 
+ LOS ANGELES, CALIFORNIA CANCELING Revised CAL. P.U.C. SHEET NO. 63916-G 
+      
+  Schedule No. G-BTS Sheet 3  
+ BACKBONE TRANSPORTATION SERVICE  
+   
+(Continued) 
+ (Continued)   
+ (TO BE INSERTED BY UTILITY) ISSUED BY (TO BE INSERTED BY CAL. PUC) 
+ADVICE LETTER NO. 6655-G Dan Skopec SUBMITTED Jun 26, 2026 
+DECISION NO.  Senior Vice President EFFECTIVE Jul 1, 2026 
+3C9 Regulatory Affairs RESOLUTION NO. G-3611 
+ 
+RATES 
+ 
+BACKBONE TRANSPORTATION RIGHTS  
+ 
+This Schedule provides for both firm and interruptible backbone transportation service rights.  This 
+Schedule is applicable at all Receipt Points available under the following rates: 
+ 
+   Reservation          Volumetric 
+                     Description   Rate  Rate (per Dth          Rate 
+Rate              of Service    Term Structure per day)           (per Dth)     
+ 
+G-BTS1 Firm Three 100% $0.86790  $0.0 
+  Years* Reservation 
+ 
+G-BTS2 Firm Three 100%                 $0.0         $0.86790 
+  Years* Volumetric*** 
+ 
+G-BTS2          Firm                   Thee          Modified           $0.69432                   $0.17358 
+                                                   Years*      Fixed Variable**** 
+ 
+G-BTS3 Firm Three to  100% Cost  $0.0 
+  Twenty Reservation Based 
+  Years**   
+ 
+G-BTSN1 Short Term Up to 100%  Market  $0.0 
+ Firm Three Reservation Based up to 
+  Years  $0.86790 
+ 
+G-BTSN2 Short Term Up to Modified Market   $0.17358 
+ Firm Three Fixed Variable Based up to 
+  Years  $0.69432  
+ 
+G-BTS4 Interruptible Up to 100% $0.0  Market  
+  Three Volumetric   Based up to 
+  Years    $0.86790 
+ 
+               G-BTS5****  Firm                   Three         100%                 $0.0                           $0.86790 
+                                                                  Years*       Volumetric                 
+  
+               Effective October 1, 2026, the contract terms for G-BTS1, G-BTS2, and G-BTS5 Rates are up to 
+               37 months.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+R 
+ 
+ 
+R 
+ 
+ 
+ 
+RR 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+R 
+ 
+ 
+R 
+ 
+R 
+ 
+ 
+R 
+ 
+ 
+R 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+@@@PAGE 3@@@
+SOUTHERN CALIFORNIA GAS COMPANY Revised CAL. P.U.C. SHEET NO. 64132-G 
+ LOS ANGELES, CALIFORNIA CANCELING Revised CAL. P.U.C. SHEET NO. 63917-G 
+      
+  Schedule No. G-BTS Sheet 4  
+ BACKBONE TRANSPORTATION SERVICE  
+   
+(Continued) 
+ (Continued)   
+ (TO BE INSERTED BY UTILITY) ISSUED BY (TO BE INSERTED BY CAL. PUC) 
+ADVICE LETTER NO. 6654-G Dan Skopec SUBMITTED Jun 26, 2026 
+DECISION NO. D. 11-04-032  Senior Vice President EFFECTIVE Jul 1, 2026 
+4C5 Regulatory Affairs RESOLUTION NO.  
+ 
+RATES  (Continued) 
+ 
+       BACKBONE TRANSPORTATION RIGHTS  (Continued) 
+ 
+        * Terms are available for up to twenty years during Step 3 of the open season. 
+      ** Customers taking service under G-BTS3 and Rule No. 39 will also pay the G-BTS1 rate. 
+    *** Reverts back to Modified Fixed Variable Structure on October 1, 2026. 
+  **** Effective October 1, 2026. 
+ 
+ BILLING CALCULATION 
+ 
+Monthly Reservation Charge:  
+ 
+The Monthly Reservation Charge is payable each month regardless of the quantity of gas scheduled 
+during the billing period.  The Reservation Charge for each billing period shall be calculated using 
+the applicable reservation rate and the DCQ as specified in Customer’s Backbone Transportation 
+Service Contract (BTSC). 
+ 
+Monthly Reservation Charge = Applicable Reservation Rate * DCQ * number of days in the 
+billing period (or, if less than one month, number of days in term 
+of contract). 
+ 
+Monthly Volumetric Charge:  
+ 
+The Monthly Volumetric Charge for each billing period shall be calculated using the applicable 
+volumetric rate multiplied by the scheduled quantities on the Customer’s BTSC. 
+ 
+Monthly Volumetric Charge = Applicable Volumetric Rate * Quantities of Gas 
+Scheduled during the billing period. 
+ 
+In-Kind Energy Charges: 
+ 
+Customers transporting gas over the backbone transmission system shall deliver each day for each 
+billing period at the receipt point an additional in-kind quantity of natural gas equal to a percent of 
+the total quantity delivered at the receipt point.  The quantity received by the Utility at the receipt 
+point shall equal the quantity delivered by the Utility to the delivery point divided by (1 - x) where 
+x is the decimal equivalent of the backbone transmission system in-kind fuel factor percentage. 
+ 
+Rate, percent reduction  .......................................................   0.127%  
+ 
+Any applicable volumetric charges shall be charged on scheduled volumes net of shrinkage. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+R 
+ 
+ 
+@@@PAGE 4@@@
+SOUTHERN CALIFORNIA GAS COMPANY Revised CAL. P.U.C. SHEET NO. 47176-G
+ LOS ANGELES, CALIFORNIA CANCELING Original CAL. P.U.C. SHEET NO. 42264-G
+     
+ Schedule No. G-BTS Sheet 5 T
+ BACKBONE TRANSPORTATION SERVICE T
+ 
+(Continued) 
+ (Continued)   
+(TO BE INSERTED BY UTILITY) ISSUED BY (TO BE INSERTED BY CAL. PUC) 
+ADVICE LETTER NO. 4240 Lee Schavrien DATE FILED May 6, 2011
+DECISION NO. 11-04-032 Senior Vice President EFFECTIVE Oct 1, 2011
+5C23 Regulatory Affairs RESOLUTION NO.   
+ 
+SPECIAL CONDITIONS 
+ 
+GENERAL 
+ 
+1. The definitions of the principal terms used in this  schedule are found either herein or in Rule No. 1, 
+Definitions.  
+ 
+2. Any disputed bill will be treated in acco rdance with Rule No. 11, Disputed Bills.  
+ 
+3. As a condition precedent to service under this sche dule, an executed Receipt Point Master Agreement 
+(RPMA) and a Backbone Transportation Service Contract (BTSC) (Form Nos. 6597-18 and 6597-17) 
+are required.  All contracts, rates and conditions are subject to revision and modification as a result of 
+CPUC order or rules.  
+ 
+4. Customer must meet the Utility’s applicable credit requirements.  
+ 
+5. The Utility will display on its Electronic Bu lletin Board (EBB) total available backbone 
+transportation service capacity at each point along with the firm and interruptible scheduled volumes 
+at the respective points during each nomination cycle.  
+ 
+6. The Utility will file quarterly reports to the Commission stating the Backbone Transportation Service 
+rights held by Customers.  Such reports will provide the name of the entity holding firm Backbone 
+Transportation Service rights, the quantity held, usage of the rights, and the terms of those rights.  
+Such information, excluding usage, will also be posted on the Utility’s EBB and will be updated 
+daily.  
+ 
+7. The Utility will post on its EBB, by Receipt Poin t, all contracted Backbone Transportation Service 
+capacity and the available unsubscribed Backbone Transportation Service capacity for sale.   This 
+information will be updated on a daily basis.  
+ 
+8 This rate schedule is the successor to rate Sche dule No. G-RPA.  Effective October 1, 2011, all 
+references to rate Schedule No. G-RPA shall be deemed references to rate Schedule No. G-BTS. 
+ 
+9.
+  Once any notice is posted on the EBB that identifies a reduced receipt point or transmission zone 
+capacity, the Utility will limit the sale and exchange of firm Backbone Transportation Service 
+capacity to the reduced capacity quantity for that receipt point and transmission zone for the duration 
+of the posted event.  
+ 
+ 
+ 
+ 
+L 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+L 
+T,L 
+L 
+ | 
+ | 
+ | 
+L 
+T,L 
+T,L 
+L 
+ 
+T,L 
+   | 
+T,L 
+L 
+L 
+ 
+T,L 
+T,L 
+ 
+ 
+N 
+ | 
+ | 
+ | 
+ | 
+ | 
+N 
+L 
+ 
+ 
+ 
+@@@PAGE 5@@@
+SOUTHERN CALIFORNIA GAS COMPANY Revised CAL. P.U.C. SHEET NO. 49399-G
+ LOS ANGELES, CALIFORNIA CANCELING Revised CAL. P.U.C. SHEET NO. 47177-G**
+     
+ Schedule No. G-BTS Sheet 6
+ BACKBONE TRANSPORTATION SERVICE
+ 
+(Continued) 
+ (Continued)   
+(TO BE INSERTED BY UTILITY) ISSUED BY (TO BE INSERTED BY CAL. PUC) 
+ADVICE LETTER NO. 4517 Lee Schavrien DATE FILED Jul 2, 2013
+DECISION NO.  Senior Vice President EFFECTIVE Sep 4, 2014
+6C10  RESOLUTION NO.   
+ 
+SPECIAL CONDITIONS  (Continued) 
+ 
+GENERAL  (Continued) 
+ 
+10. The Utility will not sell incremental firm recei pt point capacity following the announcement of an 
+OFO for the flow day on which the OFO is called.  Once an OFO has been called, the Utility will be 
+limited to sales of incremental interruptible Backbone Transportation Service capacity for the flow 
+day on which the OFO is called. 
+ 
+11. Customers may aggregate their firm Backbone Tr ansportation Service capacity into one contract 
+number for each receipt point for the purposes of nominations and scheduling.  Only firm Backbone 
+Transportation Service contracts under identical rate schedules may be aggregated.  Aggregation of 
+contracts must be done using the EBB.  
+ 
+NOMINATIONS AND BALANCING 
+ 
+1. Service under this rate schedule shall be subject to  all applicable terms, conditions and obligations of 
+Rule No. 23, Continuity of Service and Interruption of Delivery, Rule No. 30, Transportation of 
+Customer-Owned Gas, and Rate Schedule No. G-IMB, Transportation Imbalance Service.  
+ 
+2. The Utility will schedule interruptible nominati ons up to all available Backbone Transportation 
+Service capacity at each of its Receipt Points subject to Rule No. 30, Transportation of Customer-
+Owned Gas.  
+ 
+3. Unless otherwise indicated in a discounted contract, customers holding firm Backbone 
+Transportation Service capacity will be able to nominate natural gas for delivery on an alternate 
+“within-the-zone” firm basis from any specific Receipt Point within an applicable transmission zone.  
+Unless otherwise indicated in a discounted contract, customers will also be able to nominate natural 
+gas for delivery on an alternate “outside-the-zone” firm basis from any receipt point on the system.  
+All such nominations will be scheduled in accordance with Rule No. 30, Transportation of Customer-
+Owned Gas. 
+ 
+4. A customer may opt to designate one and only one  nominating agent in addition to itself at any one 
+time to nominate on all BTSCs under a customer’s RPMA.  Customer must provide appropriate 
+written authorization to the Utility of its intent to add or change a designated nominating agent via 
+the Nomination and Trading Authorization Form (Form No. 9924).  Such designation shall be subject 
+to that nominating agent complying with applicable tariff and contractual provisions.  Customer shall 
+provide appropriate written notice to the Utility of its intent to terminate a nominating agent via the 
+Termination of Nominating or Trading Agent Form (Form No. 9926). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+N 
+ 
+ 
+N 
+ 
+ 
+ 

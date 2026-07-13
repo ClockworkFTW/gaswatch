@@ -1,0 +1,505 @@
+@@@PAGE 5@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Thirteenth Revised Sheet No. 5 
+Fifth Revised Volume No. 1  
+  
+STATEMENT OF RATES 
+Effective Rates Applicable to 
+Rate Schedules TF-1, TF-2, TI-1, TFL-1 and TIL-1 
+(Dollars per Dth) 
+                                                          
+                                        Base                   
+    Rate Schedule and           Tariff Rate (1),(3)              
+      Type of Rate           Minimum  Maximum   
+__________________________   _______  _______   
+ 
+Rate Schedule TF-1 (4)(5) 
+  Reservation 
+   (Large Customer) 
+     System-Wide                .00000  .37250      
+     25 Year Evergreen Exp.     .00000  .27082      
+ 
+  Volumetric (2) 
+    (Large Customer)          
+      System-Wide               .00935  .00935    
+      25 Year Evergreen Exp.    .00935  .00935    
+ 
+    (Small Customer) (6)        .00935  .66230    
+     
+  Scheduled Overrun (2)         .00935  .38185    
+ 
+Rate Schedule TF-2 (4)(5) 
+  Reservation                   .00000  .37250    
+  Volumetric                    .00935  .00935      
+  Scheduled Daily Overrun       .00935  .38185     
+  Annual Overrun                .00935  .38185     
+ 
+Rate Schedule TI-1 (2) 
+  Volumetric (7)               .00935  .38185   
+   
+Rate Schedule TFL-1 (4)(5)  
+  Reservation 
+      KB Lateral         .00000  .01887 
+ 
+  Volumetric  (2)    
+      KB Lateral                        .00000  .00000 
+ 
+        Scheduled Overrun (2) 
+      KB Lateral     .00000  .01887 
+     
+Rate Schedule TIL-1 (2) 
+  Volumetric          
+      KB Lateral      .00000  .01887 
+ 
+@@@PAGE 6@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Third Revised Sheet No. 5-A 
+Fifth Revised Volume No. 1 Superseding 
+ Second Revised Sheet No. 5-A 
+STATEMENT OF RATES (Continued) 
+ 
+Effective Rates Applicable to  
+Rate Schedules TF-1, TF-2, TI-1, TFL-1 and TIL-1 (Continued) 
+ 
+(Dollars per Dth) 
+ 
+Entitlement Unauthorized Overrun and Underrun (8)         Rate 
+___________________________________________             _________  
+ 
+General System Unauthorized Daily Overrun   (9) 
+   
+ 
+General System Unauthorized Daily Underrun  10.00000 
+ 
+ 
+General System Unauthorized Underrun Imbalances  
+ not eliminated after 72 hours                          10.00000 
+ 
+ 
+Customer-Specific Entitlement Penalty  10.00000 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+__________________________________ 
+ 
+Footnotes 
+ 
+(1) Rate excludes surcharges approved by the Commission.  
+(2) Annual Charge Adjustment (“ACA”) surcharge may be applicable. Section 
+16 of the General Terms and Conditions describes the basis and 
+applicability of the ACA surcharge. 
+ 
+ 
+@@@PAGE 7@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Twenty Fifth Revised Sheet No. 5-B 
+Fifth Revised Volume No. 1 Superseding 
+ Twenty Fourth Revised Sheet No. 5-B 
+STATEMENT OF RATES (Continued) 
+ 
+Effective Rates Applicable to  
+Rate Schedules TF-1, TF-2, TI-1, TFL-1 and TIL-1 (Continued) 
+ 
+ 
+Footnotes (Continued) 
+ 
+(3) To the extent Transporter discounts the Maximum Base Tariff Rate, such 
+discounts will be applied on a non-discriminatory basis, subject to the 
+policies of Order No. 497. 
+ 
+ Shippers receiving service under these rate schedules are required to 
+furnish fuel reimbursement in-kind at the rates specified on Sheet No. 
+14. 
+ 
+ An incremental facilities charge or other payment method provided for 
+in Section 21 or 29 of the General Terms and Conditions, is payable in 
+addition to all other rates and charges if such a charge is included in 
+Exhibit C to a Shipper’s Transportation Service Agreement. 
+ 
+In addition to the rates set forth on Sheet No. 5, Puget Sound Energy, 
+Inc.’s Transportation Service Agreement Nos. 140053 and 143077 are 
+subject to an annual incremental facility charge pursuant to Section 21 
+of the General Terms and Conditions. The effective annual incremental 
+facility charge for the South Seattle Delivery Lateral Expansion 
+Project is $1,683,429, and it is billed in equal monthly one-twelfth 
+increments with a daily incremental facility charge of $0.07218 per 
+Dth. The effective annual incremental facility charge for the North 
+Seattle Lateral Upgrade Project is $8,485,627, and it is billed in 
+equal monthly one-twelfth increments with a daily incremental facility 
+charge of $0.13454 per Dth. 
+ 
+ In addition to the reservation rates shown on Sheet No. 5, Shippers who 
+contract for Columbia Gorge Expansion Project capacity are subject to a 
+facility reservation surcharge pursuant to Section 3.4 of Rate Schedule 
+TF-1. The facility charge used in deriving the Columbia Gorge Expansion 
+Project facility reservation surcharge has a minimum rate of $0 and a 
+maximum rate of $0.10646. 
+ 
+ In addition to the reservation rates shown on Sheet No. 5, Shippers who 
+contract service under Rate Schedules TF-1 (Large Customer), TF-1 25-
+Year Evergreen, and TF-2 are subject to a Modernization and Emissions 
+Program Cost Recovery Mechanism (CRM) Surcharge pursuant to Section 30 
+of this Tariff. CRM Surcharge is currently $0.03389. 
+ 
+@@@PAGE 8@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Tenth Revised Sheet No. 5-C 
+Fifth Revised Volume No. 1 Superseding 
+ Ninth Revised Sheet No. 5-C 
+STATEMENT OF RATES (Continued) 
+ 
+Effective Rates Applicable to  
+Rate Schedules TF-1, TF-2, TI-1, TFL-1 and TIL-1 (Continued) 
+ 
+(Dollars per Dth) 
+ 
+Footnotes (Continued) 
+ 
+(4) All reservation rates are daily rates computed on the basis of 365 days 
+per year. 
+ 
+For Rate Schedule TF-1, the 25-Year Evergreen Expansion reservation and 
+volumetric rates apply to Shippers receiving service under Rate 
+Schedule TF-1 Evergreen Expansion service agreements.  The System-Wide 
+reservation and volumetric rates apply to Shippers receiving service 
+under all other Rate Schedule TF-1 service agreements.   
+ 
+For Rate Schedule TF-1, the 25-Year Evergreen Expansion maximum base 
+tariff reservation rate is comprised of $0.26587 for transmission costs 
+and $0.00495 for storage costs.  The System-Wide maximum base tariff 
+reservation rate for Rate Schedule TF-1 and the maximum base tariff 
+reservation rate for Rate Schedule TF-2 are comprised of $0.36755 for 
+transmission costs and $0.00495 for storage costs. 
+ 
+ For Rate Schedule TF-1 (Large Customer), the maximum base tariff 
+volumetric rates applicable to Shippers receiving service under Rate 
+Schedule TF-1 Evergreen Expansion service agreements are comprised of 
+$0.00924 for transmission costs and $0.00011 for storage costs.  The 
+maximum base tariff volumetric rates for all other services under Rate 
+Schedule TF-1 (Large Customer) and for services under Rate Schedule TF-
+2 are comprised of $0.00924 for transmission costs and $0.00011 for 
+storage costs. 
+ 
+@@@PAGE 9@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Ninth Revised Sheet No. 5-D 
+Fifth Revised Volume No. 1 Superseding 
+ Eighth Revised Sheet No. 5-D 
+STATEMENT OF RATES (Continued) 
+ 
+Effective Rates Applicable to  
+Rate Schedules TF-1, TF-2, TI-1, TFL-1 and TIL-1 (Continued) 
+ 
+(Dollars per Dth) 
+ 
+Footnotes (Continued) 
+ 
+(5) Rates for Rate Schedules TF-1, TF-2 and TFL-1 are also applicable to 
+capacity release service except for short-term capacity release 
+transactions for a term of one year or less that take effect on or 
+before one year from the date on which Transporter is notified of the 
+release, which are not subject to the stated Maximum Base Tariff Rate.  
+(Section 22 of the General Terms and Conditions describes how bids for 
+capacity release will be evaluated.)  The reservation rate is the 
+comparable volumetric bid reservation charge applicable to Replacement 
+Shippers bidding for capacity released on a one-part volumetric bid 
+basis. 
+ 
+ 
+(6) For Rate Schedule TF-1 (Small Customer), the Maximum Base Tariff Rate 
+is comprised of $0.65229 for transmission costs and $0.01001 for 
+storage costs.  Transporter will not schedule gas for delivery to a 
+Small Customer subject to this Rate Schedule TF-1 under any 
+transportation Service Agreement (excluding its Rate Schedule TF-2 
+Service Agreement at Plymouth held at the time of storage service 
+unbundling in RP93-5) unless such Small Customer has scheduled its full 
+Contract Demand for firm service under its Rate Schedule TF-1 (Small 
+Customer) Service Agreement(s)for that day. 
+ 
+(7) Rate Schedule TI-1 maximum base tariff volumetric rate is comprised of 
+$0.37679 for transmission costs and $0.00506 for storage costs. 
+ 
+(8) Applicable to Rate Schedules TF -1, TF-2, TI-1, TFL-1 and TIL-1 pursuant 
+to Section 15.5 of the General Terms and Conditions. 
+ 
+(9) The General System Unauthorized Daily Overrun Charge per Dth is the 
+greater of $10 or 150 percent of the highest midpoint price at NW Wyo. 
+Pool, NW s. of Green River, Stanfield Ore., NW Can. Bdr. (Sumas), Kern 
+River Opal, or El Paso Bondad as reflected in the Daily Price Survey 
+published in “Gas Daily.” 
+ 
+ 
+@@@PAGE 10@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Eighth Revised Sheet No. 6 
+Fifth Revised Volume No. 1 Superseding 
+ Seventh Revised Sheet No. 6 
+ 
+STATEMENT OF RATES (Continued) 
+ 
+Effective Rates Applicable to Rate Schedules DEX-1, TPAL, and PAL 
+ 
+(Dollars per Dth) 
+ 
+                                                          
+                                        Base                     
+                                Tariff Rate (1),(3) 
+      Type of Rate            Minimum  Maximum   
+__________________________    _______  _______   
+ 
+Rate Schedule DEX-1 (2),(4) 
+ 
+   Deferred Exchange            .00000  .38185 
+ 
+Rate Schedule TPAL 
+ 
+   Park/Loan    .00000  .38185 
+   Park/Loan Balance   .00000  .38185 
+   Unpark/Loan Payback   .00000  .38185 
+ 
+Rate Schedule PAL 
+ 
+   Park and Loan                 .00000  .38185 
+ 
+ 
+ 
+_____________________ 
+ 
+Footnotes 
+ 
+(1) Rate excludes surcharges approved by the Commission. 
+ 
+(2) ACA surcharge may be applicable. Section 16 of the General Terms and 
+Conditions describes the basis and applicability of the ACA surcharge. 
+ 
+(3) To the extent Transporter discounts the maximum currently effective 
+tariff rate, such discounts will be applied on a non-discriminatory 
+basis, subject to the policies of Order No. 497. 
+ 
+(4) Shippers receiving service under this rate schedule are required to 
+furnish fuel reimbursement in-kind at the rates specified in the 
+Statement of Rates, except as provided in Section 4 of Rate Schedule 
+DEX-1. 
+@@@PAGE 11@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Tenth Revised Sheet No. 7 
+Fifth Revised Volume No. 1 Superseding 
+ Ninth Revised Sheet No. 7 
+STATEMENT OF RATES (Continued) 
+ 
+     Effective Rates Applicable to Rate Schedules SGS-2F and SGS-2I 
+ 
+                             (Dollars per Dth) 
+ 
+                                                        Base 
+            Rate Schedule and                       Tariff Rate (1) 
+               Type of Rate                        Minimum   Maximum 
+        _________________________                  _______   _______ 
+                                                                
+        Rate Schedule SGS-2F (2) (3) (4) (5) 
+           Demand Charge 
+              Pre-Expansion Shipper                0.00000   0.02220  
+          
+              Expansion Shipper                    0.00000   0.03393 
+ 
+           Capacity Demand Charge 
+              Pre-Expansion Shipper                0.00000   0.00081 
+            
+              Expansion Shipper                    0.00000   0.00291 
+ 
+           Volumetric Bid Rates 
+              Withdrawal Charge 
+                 Pre-Expansion Shipper             0.00000   0.02220 
+            
+       Expansion Shipper                 0.00000   0.03393 
+ 
+              Storage Charge 
+                 Pre-Expansion Shipper             0.00000   0.00081  
+          
+                 Expansion Shipper                 0.00000   0.00291 
+ 
+        Rate Schedule SGS-2I 
+           Volumetric                              0.00000   0.00240 
+ 
+ 
+_____________________ 
+ 
+Footnotes 
+(1) Shippers receiving service under these rate schedules are required to 
+furnish fuel reimbursement in-kind at the rates specified on Sheet             
+No. 14. 
+ 
+ 
+ 
+@@@PAGE 12@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Fourth Revised Sheet No. 7-A 
+Fifth Revised Volume No. 1 Superseding 
+ Third Revised Sheet No. 7-A 
+STATEMENT OF RATES (Continued) 
+ 
+Effective Rates Applicable to Rate Schedules SGS-2F and SGS-2I (Continued) 
+ 
+ 
+Footnotes (Continued) 
+ 
+(2) Rates are daily rates computed on the basis of 365 days per year. 
+ 
+Rates are also applicable to capacity release service except for short-
+term capacity release transactions for a term of one year or less that 
+take effect on or before one year from the date on which Transporter is 
+notified of the release, which are not subject to the stated Maximum 
+Base Tariff Rate.  (Section 22 of the General Terms and Conditions 
+describes how bids for capacity release will be evaluated.)  The 
+Withdrawal Charge and Storage Charge are applicable to Replacement 
+Shippers bidding for capacity released on a one-part volumetric bid 
+basis. 
+ 
+ 
+@@@PAGE 13@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Eighth Revised Sheet No. 8 
+Fifth Revised Volume No. 1 Superseding 
+ Seventh Revised Sheet No. 8 
+RESERVED FOR FUTURE USE 
+ 
+@@@PAGE 14@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Tenth Revised Sheet No. 8-A 
+Fifth Revised Volume No. 1 Superseding 
+ Ninth Revised Sheet No. 8-A 
+ 
+ 
+STATEMENT OF RATES (Continued) 
+ 
+Effective Rates Applicable to Rate Schedules LS-2F and LS-2I 
+ 
+(Dollars per Dth) 
+                 Base 
+   Rate Schedule and        Tariff Rate (1) 
+      Type of Rate       Minimum Maximum 
+    _________________________________________    _______ _______ 
+ 
+    Rate Schedule LS-2F (3) 
+     
+      Demand Charge (2)        0.00000 0.03136 
+            
+      Capacity Demand Charge (2)       0.00000 0.00401 
+            
+      Volumetric Bid Rates  
+        Vaporization Demand-Related Charge (2)    0.00000 0.03136 
+   Storage Capacity Charge (2)      0.00000 0.00401 
+             
+      Liquefaction         0.58646 0.58646 
+      Vaporization        0.07272 0.07272 
+ 
+ 
+    Rate Schedule LS-2I 
+  
+      Volumetric         0.00000 0.00802 
+ 
+ Liquefaction         0.58646 0.58646 
+      Vaporization          0.07272 0.07272 
+ 
+_____________________ 
+ 
+Footnotes 
+ 
+(1) Shippers receiving service under these rate schedules are required to 
+furnish fuel reimbursement in-kind at the rates specified on Sheet No. 
+14. 
+ 
+(2) Rates are daily rates computed on the basis of 365 days per year. 
+ 
+(3) Rates are also applicable to capacity release service except for short-
+term capacity release transactions for a term of one year or less that 
+take effect on or before one year from the date on which Transporter is 
+notified of the release, which are not subject to the stated Maximum 
+Base Tariff Rate. (Section 22 of the General Terms and Conditions 
+describes how bids for capacity release will be evaluated.) The 
+Vaporization Demand-Related Charge and Storage Capacity Charge are 
+applicable to Replacement Shippers bidding for capacity released on a 
+one-part volumetric bid basis.  
+ 
+@@@PAGE 15@@@
+ 
+ 
+Northwest Pipeline LLC 
+FERC Gas Tariff Ninth Revised Sheet No. 9 
+Fifth Revised Volume No. 1 Superseding 
+ Eighth Revised Sheet No. 9 
+STATEMENT OF RATES (Continued) 
+ 
+Effective Rates Applicable to Rate Schedules LS-3F and LD-4I 
+ 
+(Dollars per Dth) 
+              Base 
+   Rate Schedule and        Tariff Rate (1) 
+      Type of Rate       Minimum Maximum 
+    _________________________________________    _______ _______ 
+ 
+    Rate Schedule LS-3F (3) 
+     
+      Demand Charge (2)        0.00000 0.03136 
+            
+      Capacity Demand Charge (2)       0.00000 0.00401 
+            
+      Volumetric Bid Rates  
+        Vaporization Demand-Related Charge (2)    0.00000 0.03136 
+   Storage Capacity Charge (2)      0.00000 0.00401 
+             
+      Liquefaction Charge (4)       0.58646 0.58646 
+      Vaporization Charge       0.07272 0.07272 
+ 
+ 
+    Rate Schedule LD-4I 
+  
+      Volumetric Charge        0.00000 0.78872 
+ Liquefaction Charge (4)       0.58646 0.58646 
+ 
+_____________________ 
+Footnotes 
+ 
+(1) Shippers receiving service under these rate schedules are required to 
+furnish fuel reimbursement in-kind at the rates specified on Sheet No. 
+14. 
+ 
+(2) Rates are daily rates computed on the basis of 365 days per year. 
+ 
+(3) Rates are also applicable to capacity release service except for short-
+term capacity release transactions for a term of one year or less that 
+take effect on or before one year from the date on which Transporter is 
+notified of the release, which are not subject to the stated Maximum 
+Base Tariff Rate. (Section 22 of the General Terms and Conditions 
+describes how bids for capacity release will be evaluated.) The 
+Vaporization Demand-Related Charge and Storage Capacity Charge are 
+applicable to Replacement Shippers bidding for capacity released on a 
+one-part volumetric bid basis.  
+ 
+(4) The Liquefaction Charge will be trued-up annually and updated pursuant 
+to Section 14.20 of the General Terms and Conditions. 
+ 

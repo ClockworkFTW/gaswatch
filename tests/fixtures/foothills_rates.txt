@@ -1,0 +1,36 @@
+@@@PAGE 0@@@
+  
+Foothills Pipe Lines Ltd. Page 1 
+ 
+TARIFF – PH ASE I  Effective Date: J anuary  1, 2026  
+TABLE OF EFFECTIVE RATES 
+1.  Rate Schedule FT, Firm Transportation Service  
+ Demand Rate  
+($/GJ/Km/Month) 
+Zone 6  0.0064729237  
+Zone 7  0.0045773105  
+  Zone 8*  0.0273505436  
+Zone 9  0.0174748917  
+  
+2.  Rate Schedule OT, Overrun Transportation Service  
+ Commodity Rate  
+($/GJ/Km) 
+Zone 6  0.0002340893  
+Zone 7  0.0001655356  
+  
+3.  Rate Schedule IT, Interruptible Transportation Service  
+ Commodity Rate  
+($/GJ/Km) 
+Zone 8  0.0009891155  
+Zone 9  0.0006319687  
+  
+4.  Monthly Abandonment Surcharge**  
+All Zones 0.1275526676  ($/GJ/Month) 
+  
+5.  Daily Abandonment Surcharge***  
+All Zones 0.0041935124  ($/GJ/Day) 
+* For Zone 8, Customer s Haul Distance shall be 170.7 km.  
+**Monthly Abandonment Surcharge a pplica ble to Rate Schedule Firm Tra nsportation Service, a nd Short Term Firm 
+Transportation Service for all zones.  
+***Daily Abandonment Surcharge applicable to Rate Schedule Overrun Transportation Service for Zone 6 & 7, 
+Interruptible Transportation Service for Z one 8 & 9, and Small General Service for Z one 9.  
