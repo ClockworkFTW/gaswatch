@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import logging
+import os
 import sys
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -16,11 +17,20 @@ from .pipelines.base import PipelineAdapter
 app = typer.Typer(help="Western gas pipeline EBB scraper — ten systems: CGT, SoCal, "
                        "GTN, NWP, NGTL, Foothills, EPNG, Transwestern, Kern River, Ruby")
 
+_LOG_FORMAT = "%(asctime)s %(levelname)s %(name)s: %(message)s"
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+    format=_LOG_FORMAT,
     handlers=[logging.StreamHandler(sys.stderr)],
 )
+# When GASWATCH_LOG is set, also tee logging to that file. This lets the Task
+# Scheduler runner show live progress in its console window (no shell
+# redirection needed) while still keeping a persistent log.
+_log_file = os.environ.get("GASWATCH_LOG")
+if _log_file:
+    _fh = logging.FileHandler(_log_file, encoding="utf-8")
+    _fh.setFormatter(logging.Formatter(_LOG_FORMAT))
+    logging.getLogger().addHandler(_fh)
 log = logging.getLogger("gaswatch")
 
 
