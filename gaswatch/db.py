@@ -11,7 +11,74 @@ from .models import CapacityRecord, FlowRecord, NoticeRecord, RateDoc, TariffRat
 
 DEFAULT_DB = Path(os.environ.get("GASWATCH_DB", "data/gaswatch.db"))
 
-SCHEMA = """
+# -- v_throughput unit normalization -------------------------------------------
+# ~1030 Btu/cf heat content: 1 MMcf of pipeline gas ~ 1030 MMBtu (= 1030 Dth).
+# 1 e3m3 (10^3 m3) = 35.3147 Mcf. Approximations fit for corridor reasoning,
+# not invoice math.
+MMBTU_PER_MMCF = 1030.0
+MCF_PER_E3M3 = 35.3147
+
+# source unit -> factor to MMcf/d. v_throughput's CASE is generated from this
+# map, and export-powerbi refuses to run if a unit outside it ever appears
+# (a unit missing here would otherwise export silent NULLs).
+UNIT_TO_MMCFD = {
+    "Dth":    1.0 / MMBTU_PER_MMCF,
+    "MMBtu":  1.0 / MMBTU_PER_MMCF,
+    "MMcf":   1.0,
+    "e3m3/d": MCF_PER_E3M3 / 1000.0,
+    "e6m3/d": MCF_PER_E3M3,
+}
+
+# flows kinds that are throughput-shaped (vs storage/demand/temperature series)
+THROUGHPUT_KINDS = ("actual", "cer_throughput", "snapshot", "receipt",
+                    "scheduled", "estimate", "forecast")
+
+# Areas that ride in on a throughput kind but are NOT point/border flows.
+# SoCal's daily-operations report posts storage, demand, imbalance, fuel and
+# temperature under kind actual/estimate/forecast (its "Deliveries" and
+# "Balancing" sections, plus the total_receipts aggregate); NGTL's snapshot
+# includes linepack (inventory). These belong in system_metrics, not
+# v_throughput. Blocklist, so a NEW aggregate label on one of these reports
+# must be added here or it will leak into the throughput fact.
+NON_THROUGHPUT_AREAS = {
+    "socal": (
+        "composite_weighted_average_temperature_f",
+        "cumulative_customer_imbalance",
+        "ending_storage_balance_mcf",
+        "injection_capacity",
+        "net_injections_withdrawals",
+        "storage_injection_for_customer_balancing_withdrawal",
+        "system_sendout",
+        "total_daily_customer_imbalance",
+        "total_deliveries",
+        "total_receipts",
+        "transmission_fuel_use",
+        "withdrawal_capacity",
+    ),
+    "ngtl": ("LINEPACK",),
+}
+
+
+def _sql_list(values) -> str:
+    return "(" + ", ".join(f"'{v}'" for v in values) + ")"
+
+
+# WHERE predicate selecting the throughput-shaped subset of `flows`. Shared by
+# v_throughput (below) and export-powerbi's system_metrics query (negated
+# there), so the two partitions cannot drift apart.
+FLOWS_THROUGHPUT_PREDICATE = (
+    f"kind IN {_sql_list(THROUGHPUT_KINDS)}"
+    + "".join(
+        f"\n              AND NOT (pipeline = '{p}' AND area IN {_sql_list(areas)})"
+        for p, areas in NON_THROUGHPUT_AREAS.items()
+    )
+)
+
+_UNIT_CASE = ("CASE unit_src "
+              + " ".join(f"WHEN '{u}' THEN {f!r}" for u, f in UNIT_TO_MMCFD.items())
+              + " END")
+
+SCHEMA = f"""
 CREATE TABLE IF NOT EXISTS capacity (
     pipeline TEXT NOT NULL,
     gas_day TEXT NOT NULL,
@@ -160,6 +227,58 @@ FROM v_capacity_latest v
 LEFT JOIN locations l
   ON l.pipeline = v.pipeline AND l.location_id = v.location_id
 WHERE v.operating_cap IS NOT NULL;
+
+-- Normalized throughput: every pipeline's flow/capacity in ONE table, in MMcf/d.
+-- Conversion is driven by the source `unit` column via UNIT_TO_MMCFD (defined
+-- above; the CASE below is generated from it). Two sources are unioned: the
+-- daily capacity postings (every US pipeline, Dth) and the throughput-shaped
+-- `flows` subset (FLOWS_THROUGHPUT_PREDICATE, also defined above). NGTL and
+-- Foothills post only monthly capability forecasts to `capacity` (dropped by
+-- v_capacity_latest), so their real per-day data arrives via flows -- this view
+-- is what puts them on the same footing as the Dth pipelines. Non-throughput
+-- series (storage, demand, inventory, imbalance, supply, temperature) are
+-- excluded by kind, and by area for the pipelines that mix metric rows into a
+-- throughput kind (SoCal, NGTL linepack).
+-- The flows side keeps ONE row per (pipeline, gas_day, area): SoCal reposts a
+-- gas day as forecast, then estimate, then actual, and the best available kind
+-- wins (actual > estimate > forecast; other kinds use disjoint area names).
+-- dropped+recreated (not IF NOT EXISTS) so edits to this definition reach
+-- databases that already have it; a view holds no data, so this is free.
+DROP VIEW IF EXISTS v_throughput;
+CREATE VIEW v_throughput AS
+SELECT pipeline, gas_day, kind, source, location_type, location_id, location_name,
+       flow_direction, unit_src,
+       scheduled_raw * f AS scheduled_mmcfd,
+       capacity_raw  * f AS capacity_mmcfd,
+       design_raw    * f AS design_mmcfd,
+       available_raw * f AS available_mmcfd,
+       CASE WHEN capacity_raw > 0
+            THEN 1.0 * scheduled_raw / capacity_raw END AS utilization
+FROM (
+    SELECT s.*, {_UNIT_CASE} AS f
+    FROM (
+        SELECT pipeline, gas_day, cycle AS kind, 'capacity' AS source,
+               location_type, location_id,
+               COALESCE(NULLIF(location_name, ''), location_id) AS location_name,
+               COALESCE(flow_direction, '') AS flow_direction,
+               unit AS unit_src, scheduled_qty AS scheduled_raw,
+               operating_cap AS capacity_raw, design_cap AS design_raw,
+               available_cap AS available_raw
+        FROM v_capacity_latest
+        UNION ALL
+        SELECT pipeline, gas_day, kind, 'flows', 'area', area, area, '',
+               unit, flow, capability, NULL, NULL
+        FROM (
+            SELECT fl.*, ROW_NUMBER() OVER (
+                PARTITION BY pipeline, gas_day, area
+                ORDER BY CASE kind WHEN 'actual'   THEN 0
+                                   WHEN 'estimate' THEN 1
+                                   WHEN 'forecast' THEN 2 ELSE 3 END, kind) AS rn
+            FROM flows fl
+            WHERE {FLOWS_THROUGHPUT_PREDICATE}
+        ) WHERE rn = 1
+    ) s
+);
 """
 
 # Curated key points (edit freely; re-seeded idempotently on connect).
@@ -204,6 +323,15 @@ KEY_LOCATIONS = [
     ("socal", "kern_river_wheeler_ridge", "point", "Kern River - Wheeler Ridge", "wheeler_ridge"),
     ("socal", "kern_river_kramer_junction", "point", "Kern River - Kramer Junction", "kramer"),
     ("kernriver", "025032", "segment", "Kramer Junction - SoCal Gas", "kramer"),
+    # CGT interconnect receipts (flows `receipt` areas) -- the actual volumes
+    # arriving at the California border from each upstream system.
+    ("cgt", "gas_transmission_northwest", "point", "CGT receipt from GTN (Malin)", "malin"),
+    ("cgt", "ruby", "point", "CGT receipt from Ruby", "ruby_delivery"),
+    ("cgt", "el_paso_natural_gas", "point", "CGT receipt from EPNG (Topock)", "topock"),
+    ("cgt", "transwestern", "point", "CGT receipt from Transwestern (Topock)", "topock"),
+    ("cgt", "kern_river_gt_daggett", "point", "CGT receipt from Kern River (Daggett)", "daggett"),
+    ("cgt", "kern_river_gt_hdl", "point", "CGT receipt from Kern River (HDL)", "daggett"),
+    ("cgt", "california_production", "point", "California in-state production", None),
 ]
 
 
@@ -227,6 +355,24 @@ def connect(db_path: Path | str = DEFAULT_DB) -> sqlite3.Connection:
     )
     conn.commit()
     return conn
+
+
+def unknown_throughput_units(conn: sqlite3.Connection) -> list[str]:
+    """Units feeding v_throughput that have no factor in UNIT_TO_MMCFD.
+
+    The view's generated CASE yields NULL for such rows, which would export as
+    silently-empty MMcf/d values -- callers should fail loudly instead."""
+    known = _sql_list(UNIT_TO_MMCFD)
+    rows = conn.execute(f"""
+        SELECT DISTINCT unit FROM capacity
+        WHERE cycle != 'monthly_forecast'
+          AND unit IS NOT NULL AND unit != '' AND unit NOT IN {known}
+        UNION
+        SELECT DISTINCT unit FROM flows
+        WHERE {FLOWS_THROUGHPUT_PREDICATE}
+          AND unit IS NOT NULL AND unit != '' AND unit NOT IN {known}
+    """).fetchall()
+    return sorted(r[0] for r in rows)
 
 
 def _extra(rec) -> str:

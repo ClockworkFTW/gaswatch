@@ -368,7 +368,7 @@ def export(
     """Export a table or view to CSV for Excel/pandas work."""
     import csv as csvmod
     allowed = {"capacity", "flows", "notices", "rate_docs", "locations",
-               "pull_log", "v_utilization", "v_capacity_latest",
+               "pull_log", "v_utilization", "v_capacity_latest", "v_throughput",
                "tariff_rates", "v_current_tariff_rates"}
     if table not in allowed:
         raise typer.BadParameter(f"table must be one of {sorted(allowed)}")
@@ -397,27 +397,64 @@ def export(
     typer.echo(f"wrote {n} rows to {out}")
 
 
-# Corridor membership for the Constraints page: (pipeline, location_id) ->
-# (corridor, position in flow order). Drives the small-multiples layout.
+# Corridor membership: (pipeline, location_id) -> (corridor, position, basin).
+# Corridors follow the physical gas path from a supply basin to the California
+# border interconnect it serves (the "Key Western Interconnects" of the western
+# pipeline map: Sumas, Kingsgate, Stanfield, Opal, Malin, Topock, Needles,
+# Ehrenberg). `position` orders the points basin -> border along each path and
+# drives the small-multiples layout.
 PBI_CORRIDORS = {
-    ("ngtl", "WGAT"): ("north", 1),
-    ("gtn", "3498"): ("north", 2), ("gtn", "3500"): ("north", 3),
-    ("gtn", "28218"): ("north", 4), ("gtn", "1820"): ("north", 5),
-    ("cgt", "malin"): ("north", 6), ("cgt", "redwood_path"): ("north", 7),
-    ("epng", "160"): ("south", 1), ("epng", "300"): ("south", 2),
-    ("epng", "320"): ("south", 3), ("transwestern", "10487"): ("south", 4),
-    ("socal", "needles_topock_area"): ("south", 5),
-    ("socal", "transwestern_needles"): ("south", 5),
-    ("socal", "el_paso_ehrenberg"): ("south", 5),
-    ("cgt", "topock"): ("south", 6),
-    ("ruby", "10"): ("rockies", 1), ("ruby", "60"): ("rockies", 2),
-    ("kernriver", "054001"): ("rockies", 1), ("kernriver", "025011"): ("rockies", 3),
-    ("kernriver", "025032"): ("rockies", 3), ("kernriver", "024011"): ("rockies", 3),
-    ("socal", "kern_river_wheeler_ridge"): ("rockies", 4),
-    ("socal", "kern_river_kramer_junction"): ("rockies", 4),
-    ("cgt", "kern_river_station"): ("rockies", 5),
-    ("cgt", "daggett"): ("rockies", 5), ("cgt", "onyx_hill"): ("rockies", 5),
-    ("nwp", "28219"): ("pnw", 1), ("nwp", "28164"): ("pnw", 2),
+    # WCSB -> Malin : NGTL -> Foothills BC -> GTN -> CGT
+    ("ngtl", "WGAT"): ("wcsb_malin", 1, "WCSB"),
+    ("ngtl", "ALBERTA_BORDER"): ("wcsb_malin", 2, "WCSB"),
+    ("foothills", "ALBERTA_BORDER"): ("wcsb_malin", 3, "WCSB"),
+    ("gtn", "3498"): ("wcsb_malin", 4, "WCSB"),
+    ("gtn", "3500"): ("wcsb_malin", 5, "WCSB"),
+    ("gtn", "28218"): ("wcsb_malin", 6, "WCSB"),
+    ("gtn", "1820"): ("wcsb_malin", 7, "WCSB"),
+    ("cgt", "malin"): ("wcsb_malin", 8, "WCSB"),
+    ("cgt", "gas_transmission_northwest"): ("wcsb_malin", 8, "WCSB"),
+    ("cgt", "redwood_path"): ("wcsb_malin", 9, "WCSB"),
+    # Rocky Mountain (Opal) -> Malin : Ruby
+    ("ruby", "10"): ("rockies_malin", 1, "Rocky Mountain"),
+    ("ruby", "60"): ("rockies_malin", 2, "Rocky Mountain"),
+    ("cgt", "onyx_hill"): ("rockies_malin", 3, "Rocky Mountain"),
+    ("cgt", "ruby"): ("rockies_malin", 3, "Rocky Mountain"),
+    # Rocky Mountain (Opal) -> SoCal / CGT : Kern River
+    ("kernriver", "054001"): ("rockies_socal", 1, "Rocky Mountain"),
+    ("kernriver", "054016"): ("rockies_socal", 2, "Rocky Mountain"),
+    ("kernriver", "024011"): ("rockies_socal", 3, "Rocky Mountain"),
+    ("kernriver", "025011"): ("rockies_socal", 3, "Rocky Mountain"),
+    ("kernriver", "025032"): ("rockies_socal", 3, "Rocky Mountain"),
+    ("cgt", "daggett"): ("rockies_socal", 4, "Rocky Mountain"),
+    ("cgt", "kern_river_station"): ("rockies_socal", 4, "Rocky Mountain"),
+    ("cgt", "kern_river_gt_daggett"): ("rockies_socal", 4, "Rocky Mountain"),
+    ("cgt", "kern_river_gt_hdl"): ("rockies_socal", 4, "Rocky Mountain"),
+    ("socal", "kern_river_wheeler_ridge"): ("rockies_socal", 4, "Rocky Mountain"),
+    ("socal", "kern_river_kramer_junction"): ("rockies_socal", 4, "Rocky Mountain"),
+    # San Juan -> Topock : EPNG
+    ("epng", "160"): ("sanjuan_topock", 1, "San Juan"),
+    ("epng", "300"): ("sanjuan_topock", 2, "San Juan"),
+    ("epng", "320"): ("sanjuan_topock", 3, "San Juan"),
+    ("cgt", "topock"): ("sanjuan_topock", 4, "San Juan"),
+    ("cgt", "el_paso_natural_gas"): ("sanjuan_topock", 4, "San Juan"),
+    ("socal", "needles_topock_area"): ("sanjuan_topock", 4, "San Juan"),
+    # Permian -> Needles : Transwestern mainline to SoCal. TW is dual-sourced
+    # (Permian mainline + San Juan lateral); "Permian" is the simplification.
+    # Red Hawk Plant (transwestern 78484) is deliberately NOT here: it is a
+    # power-plant DELIVERY near Palo Verde AZ, not a supply-basin anchor.
+    ("transwestern", "10487"): ("permian_needles", 1, "Permian"),
+    ("socal", "transwestern_needles"): ("permian_needles", 2, "Permian"),
+    # Permian -> Topock : Transwestern's north leg into PG&E/CGT. Same border
+    # town as EPNG's Topock, different upstream system, so its own corridor.
+    ("cgt", "transwestern"): ("permian_topock", 1, "Permian"),
+    # Permian -> Ehrenberg : EPNG *south* mainline carries mostly Permian/Waha
+    # gas; San Juan supply rides the north system to Topock.
+    ("socal", "el_paso_ehrenberg"): ("permian_ehrenberg", 1, "Permian"),
+    # WCSB -> Sumas -> Pacific Northwest : Northwest Pipeline (does not reach CA)
+    ("nwp", "28219"): ("wcsb_pnw", 1, "WCSB"),
+    ("nwp", "28164"): ("wcsb_pnw", 2, "WCSB"),
+    ("nwp", "236124"): ("wcsb_pnw", 3, "WCSB"),
 }
 
 
@@ -433,6 +470,15 @@ def export_powerbi(
     at the folder — see docs/powerbi.md for the model and suggested measures."""
     import csv as csvmod
     conn = dbm.connect(db)
+
+    # fail loudly if a unit without an MMcf/d factor has appeared: v_throughput
+    # would otherwise export silently-NULL values for those rows
+    unknown_units = dbm.unknown_throughput_units(conn)
+    if unknown_units:
+        typer.echo(f"ERROR: unit(s) {unknown_units} feed v_throughput but have no "
+                   "factor in db.UNIT_TO_MMCFD — add one before exporting", err=True)
+        raise typer.Exit(1)
+
     out_dir.mkdir(parents=True, exist_ok=True)
     cutoff = (date.today() - timedelta(days=days)).isoformat()
 
@@ -456,26 +502,33 @@ def export_powerbi(
                 n += 1
         typer.echo(f"  {name}.csv: {n} rows")
 
-    dump("capacity_daily", conn.execute("""
+    # one normalized fact for every pipeline's flow/capacity, already in MMcf/d
+    dump("throughput", conn.execute("""
         SELECT pipeline || ':' || location_id AS location_key,
-               pipeline, gas_day, cycle, location_id,
-               COALESCE(NULLIF(location_name, ''), location_id) AS location_name,
-               design_cap, operating_cap, scheduled_qty, available_cap, unit,
-               CASE WHEN operating_cap > 0
-                    THEN 1.0 * scheduled_qty / operating_cap END AS utilization,
-               round(scheduled_qty / 1030.0, 1) AS scheduled_mmcfd,
-               round(operating_cap / 1030.0, 1) AS capacity_mmcfd
-        FROM v_capacity_latest WHERE gas_day >= ?""", (cutoff,)))
+               pipeline, gas_day, kind, source, location_type, location_id,
+               location_name, flow_direction, unit_src,
+               round(scheduled_mmcfd, 3) AS scheduled_mmcfd,
+               round(capacity_mmcfd, 3) AS capacity_mmcfd,
+               round(design_mmcfd, 3) AS design_mmcfd,
+               round(available_mmcfd, 3) AS available_mmcfd,
+               utilization
+        FROM v_throughput WHERE gas_day >= ?""", (cutoff,)))
     dump("locations", conn.execute("""
         SELECT pipeline || ':' || location_id AS location_key, pipeline, location_id,
                location_type, display_name, is_key_point, interconnect_group
         FROM locations"""),
-        extra_cols=["corridor", "position"],
+        extra_cols=["corridor", "position", "basin"],
         extra_fn=lambda r: list(PBI_CORRIDORS.get((r["pipeline"], r["location_id"]),
-                                                  ("", ""))))
-    dump("flows", conn.execute(
-        """SELECT pipeline, gas_day, area, kind, flow, capability, unit
-           FROM flows WHERE gas_day >= ?""", (cutoff,)))
+                                                  ("", "", ""))))
+    # non-throughput series (storage, demand, inventory, imbalance, supply,
+    # temperature) kept in their native units for a future Storage/Demand page.
+    # Exact complement of v_throughput's flows side — the shared predicate in
+    # db.py keeps the two partitions from drifting apart.
+    dump("system_metrics", conn.execute(
+        f"""SELECT pipeline, gas_day, area, kind, flow, capability, unit
+           FROM flows
+           WHERE NOT ({dbm.FLOWS_THROUGHPUT_PREDICATE})
+             AND gas_day >= ?""", (cutoff,)))
     dump("notices", conn.execute("""
         SELECT pipeline, notice_id, category, subject, posted_at,
                effective_start, effective_end, url FROM notices"""))

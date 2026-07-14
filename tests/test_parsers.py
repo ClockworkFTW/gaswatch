@@ -1,6 +1,7 @@
 """Parser unit tests on saved fixture responses — no network access."""
 from __future__ import annotations
 
+import csv
 import json
 from datetime import date
 from pathlib import Path
@@ -251,6 +252,11 @@ def test_socal_dailyops_csv_parse():
     ehr = [f for f in result.flows if f.area == "el_paso_ehrenberg" and f.kind == "actual"]
     assert ehr and ehr[0].flow == 514000
     assert ehr[0].gas_day == "2026-07-09"  # actual column is the prior gas day
+    # volumes carry the column-header unit; self-labeled rows override it
+    assert ehr[0].unit == "Dth"
+    by_area = {f.area: f for f in result.flows if f.kind == "actual"}
+    assert by_area["ending_storage_balance_mcf"].unit == "Mcf"
+    assert by_area["composite_weighted_average_temperature_f"].unit == "degF"
 
 
 def test_date_normalization():
@@ -621,14 +627,37 @@ def test_export_powerbi_writes_csv_set(tmp_path):
 
     from gaswatch import db as dbm
     from gaswatch.cli import app
-    from gaswatch.models import CapacityRecord, RateDoc, TariffRate
+    from gaswatch.models import CapacityRecord, FlowRecord, RateDoc, TariffRate
 
     db = tmp_path / "t.db"
     conn = dbm.connect(db)
     dbm.upsert_capacity(conn, [CapacityRecord(
         pipeline="gtn", gas_day="2026-07-01", cycle="timely", location_type="point",
-        location_id="3500", location_name="Kingsgate", operating_cap=100.0,
-        scheduled_qty=80.0)])
+        location_id="3500", location_name="Kingsgate", operating_cap=1_030_000.0,
+        scheduled_qty=824_000.0)])
+    # metric (NGTL-style) flow + a non-throughput series that must be split out
+    dbm.upsert_flows(conn, [
+        FlowRecord(pipeline="ngtl", gas_day="2026-07-01", area="WGAT", flow=1000.0,
+                   capability=2000.0, unit="e3m3/d", kind="actual"),
+        FlowRecord(pipeline="cgt", gas_day="2026-07-01", area="ending_inventory",
+                   flow=50.0, unit="MMcf", kind="inventory"),
+        # SoCal posts the same gas day as forecast -> estimate -> actual: the
+        # throughput fact must keep ONE row per area-day (best kind wins) ...
+        FlowRecord(pipeline="socal", gas_day="2026-07-01", area="el_paso_ehrenberg",
+                   flow=550_000.0, unit="Dth", kind="actual"),
+        FlowRecord(pipeline="socal", gas_day="2026-07-01", area="el_paso_ehrenberg",
+                   flow=560_000.0, unit="Dth", kind="estimate"),
+        FlowRecord(pipeline="socal", gas_day="2026-07-01", area="el_paso_ehrenberg",
+                   flow=570_000.0, unit="Dth", kind="forecast"),
+        # ... and its storage/temperature rows ride in on kind='actual' too but
+        # are system metrics, not throughput
+        FlowRecord(pipeline="socal", gas_day="2026-07-01",
+                   area="ending_storage_balance_mcf", flow=107_000_000.0,
+                   unit="Dth", kind="actual"),
+        FlowRecord(pipeline="socal", gas_day="2026-07-01",
+                   area="composite_weighted_average_temperature_f", flow=76.0,
+                   unit="Dth", kind="estimate"),
+    ])
     dbm.upsert_tariff_rates(conn, [TariffRate(
         pipeline="gtn", rate_schedule="FTS-1", component="reservation", path="p",
         qualifier="max", value=0.02, unit="$/Dth/d", effective_date="2026-04-01")])
@@ -640,16 +669,108 @@ def test_export_powerbi_writes_csv_set(tmp_path):
     result = CliRunner().invoke(app, ["export-powerbi", "--db", str(db),
                                       "--out-dir", str(out)])
     assert result.exit_code == 0, result.output
-    expected = {"capacity_daily", "locations", "flows", "notices",
+    expected = {"throughput", "locations", "system_metrics", "notices",
                 "tariff_rates_current", "tariff_rates_history", "pull_health",
                 "rate_docs_current", "feed"}
     assert {p.stem for p in out.glob("*.csv")} == expected
-    cap = (out / "capacity_daily.csv").read_text(encoding="utf-8-sig").splitlines()
-    assert cap[0].startswith("location_key,pipeline,gas_day")
-    assert cap[0].endswith("scheduled_mmcfd,capacity_mmcfd")
-    assert cap[1].startswith("gtn:3500,gtn,2026-07-01")
-    assert ",0.8," in cap[1]  # utilization column
-    locs = (out / "locations.csv").read_text(encoding="utf-8-sig").splitlines()
-    assert locs[0].endswith("corridor,position")
-    gtn_row = next(l for l in locs if l.startswith("gtn:3500"))
-    assert gtn_row.endswith("north,3")
+
+    rows = list(csv.DictReader(
+        (out / "throughput.csv").read_text(encoding="utf-8-sig").splitlines()))
+    by_pipe = {r["pipeline"]: r for r in rows}
+    # Dth -> MMcf/d (/1030) and metric e3m3/d -> MMcf/d (x0.0353147) land in ONE
+    # table, so NGTL is directly comparable to the Dth systems.
+    assert float(by_pipe["gtn"]["scheduled_mmcfd"]) == pytest.approx(800.0, rel=1e-3)
+    assert float(by_pipe["gtn"]["capacity_mmcfd"]) == pytest.approx(1000.0, rel=1e-3)
+    assert float(by_pipe["ngtl"]["scheduled_mmcfd"]) == pytest.approx(35.3147, rel=1e-3)
+    assert float(by_pipe["ngtl"]["capacity_mmcfd"]) == pytest.approx(70.6294, rel=1e-3)
+    # utilization is unit-invariant (computed from the raw values)
+    assert float(by_pipe["gtn"]["utilization"]) == pytest.approx(0.8)
+    assert float(by_pipe["ngtl"]["utilization"]) == pytest.approx(0.5)
+
+    # SoCal's forecast/estimate/actual triplet collapses to the best kind —
+    # exactly one throughput row per area-day, no triple-counting
+    socal = [r for r in rows if r["pipeline"] == "socal"]
+    assert len(socal) == 1
+    assert socal[0]["kind"] == "actual"
+    assert float(socal[0]["scheduled_mmcfd"]) == pytest.approx(550_000 / 1030, rel=1e-3)
+
+    # non-throughput series are split out, not mixed into the flow facts —
+    # including SoCal's, which arrive under a throughput kind
+    thr = (out / "throughput.csv").read_text(encoding="utf-8-sig")
+    sysm = (out / "system_metrics.csv").read_text(encoding="utf-8-sig")
+    for metric in ("ending_inventory", "ending_storage_balance_mcf",
+                   "composite_weighted_average_temperature_f"):
+        assert metric not in thr
+        assert metric in sysm
+
+    # corridor/basin reach the locations dimension
+    locs = list(csv.DictReader(
+        (out / "locations.csv").read_text(encoding="utf-8-sig").splitlines()))
+    wgat = next(r for r in locs if r["location_key"] == "ngtl:WGAT")
+    assert (wgat["corridor"], wgat["position"], wgat["basin"]) == ("wcsb_malin", "1", "WCSB")
+    gtn_loc = next(r for r in locs if r["location_key"] == "gtn:3500")
+    assert (gtn_loc["corridor"], gtn_loc["position"]) == ("wcsb_malin", "5")
+
+
+def test_flows_kinds_partition_exactly(tmp_path):
+    """Every flows row lands in exactly one of throughput / system_metrics.
+
+    Guards the shared FLOWS_THROUGHPUT_PREDICATE: a kind or area routed into
+    both files double-counts; routed into neither, it silently vanishes."""
+    from typer.testing import CliRunner
+
+    from gaswatch import db as dbm
+    from gaswatch.cli import app
+    from gaswatch.models import FlowRecord
+
+    db = tmp_path / "t.db"
+    conn = dbm.connect(db)
+    kinds = list(dbm.THROUGHPUT_KINDS) + ["inventory", "storage", "demand",
+                                          "imbalance", "supply", "temperature"]
+    dbm.upsert_flows(conn, [
+        FlowRecord(pipeline="cgt", gas_day="2026-07-01", area=f"area_{k}",
+                   flow=1.0, unit="MMcf", kind=k)
+        for k in kinds
+    ] + [  # blocklisted socal areas leave throughput even on a throughput kind
+        FlowRecord(pipeline="socal", gas_day="2026-07-01", area=a, flow=1.0,
+                   unit="Dth", kind="actual")
+        for a in dbm.NON_THROUGHPUT_AREAS["socal"]
+    ])
+    conn.close()
+
+    out = tmp_path / "pbi"
+    result = CliRunner().invoke(app, ["export-powerbi", "--db", str(db),
+                                      "--out-dir", str(out)])
+    assert result.exit_code == 0, result.output
+    thr = list(csv.DictReader(
+        (out / "throughput.csv").read_text(encoding="utf-8-sig").splitlines()))
+    sysm = list(csv.DictReader(
+        (out / "system_metrics.csv").read_text(encoding="utf-8-sig").splitlines()))
+    in_thr = {(r["pipeline"], r["location_id"]) for r in thr if r["source"] == "flows"}
+    in_sysm = {(r["pipeline"], r["area"]) for r in sysm}
+    assert in_thr == {("cgt", f"area_{k}") for k in dbm.THROUGHPUT_KINDS}
+    assert in_thr.isdisjoint(in_sysm)
+    assert in_thr | in_sysm == {("cgt", f"area_{k}") for k in kinds} | {
+        ("socal", a) for a in dbm.NON_THROUGHPUT_AREAS["socal"]}
+
+
+def test_export_powerbi_fails_on_unknown_unit(tmp_path):
+    """A unit with no MMcf/d factor must abort the export, not export NULLs."""
+    from typer.testing import CliRunner
+
+    from gaswatch import db as dbm
+    from gaswatch.cli import app
+    from gaswatch.models import CapacityRecord
+
+    db = tmp_path / "t.db"
+    conn = dbm.connect(db)
+    dbm.upsert_capacity(conn, [CapacityRecord(
+        pipeline="ngtl", gas_day="2026-07-01", cycle="timely", location_type="point",
+        location_id="X", location_name="X", operating_cap=10.0, scheduled_qty=5.0,
+        unit="GJ")])
+    conn.close()
+
+    result = CliRunner().invoke(app, ["export-powerbi", "--db", str(db),
+                                      "--out-dir", str(tmp_path / "pbi")])
+    assert result.exit_code == 1
+    assert "GJ" in result.output and "UNIT_TO_MMCFD" in result.output

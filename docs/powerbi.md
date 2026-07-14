@@ -25,15 +25,61 @@ the CSVs are just files, so no driver or connection string is involved.
 
 | File | Grain | Role |
 |---|---|---|
-| `capacity_daily.csv` | pipeline × gas_day × location (latest cycle) | fact — corridor minis (incl. `scheduled_mmcfd` / `capacity_mmcfd`, Dth ÷ 1.03) |
-| `flows.csv` | pipeline × gas_day × area × kind | fact — NGTL flows, CGT/SoCal supply, storage |
+| `throughput.csv` | pipeline × gas_day × location × flow_direction × kind | **the** fact — every pipeline's flow/capacity, already in MMcf/d |
+| `locations.csv` | location (incl. `corridor`, `position`, `basin`) | dimension — drives corridor small multiples |
+| `system_metrics.csv` | pipeline × gas_day × area × kind | non-throughput series (storage, demand, inventory, imbalance, fuel, temperature — incl. SoCal's, which post under throughput kinds) |
 | `feed.csv` | event, bucketed | the Briefing page (pending / overnight / opening / rate / constraint) |
 | `notices.csv` | notice | maintenance timeline + tables |
 | `tariff_rates_current.csv` | rate value in force | fact — rates matrix |
 | `tariff_rates_history.csv` | rate value × effective_date | fact — rate history |
 | `rate_docs_current.csv` | effective rate document | reference table with URLs |
-| `locations.csv` | location (incl. `corridor` + `position`) | dimension — drives corridor small multiples |
 | `pull_health.csv` | pipeline × dataset | ops health table |
+
+### `throughput` — one normalized table, one unit
+
+`throughput.csv` dumps the `v_throughput` view, which unions the two shapes the
+EBBs actually publish and converts both to **MMcf/d**, so NGTL sits next to Kern
+River in the same column:
+
+| source | what | conversion |
+|---|---|---|
+| `capacity` postings (cgt, epng, gtn, kernriver, nwp, ruby, socal, transwestern) | scheduled vs operating capacity per point | Dth ÷ 1030 |
+| `flows` — ngtl/foothills `actual` | flow vs capability per area | 10³m³/d × 0.0353147 |
+| `flows` — socal point receipts (best of `actual` > `estimate` > `forecast`) | flow per border/producer point | Dth ÷ 1030 |
+| `flows` — cgt `receipt` | volumes arriving at the CA border per interconnect | MMcf × 1 |
+| `flows` — ngtl `cer_throughput` | official CER key-point history back to 2006 | 10³m³/d × 0.0353147 |
+
+Conversion is driven by the source `unit` column (kept as `unit_src`); the
+factor map lives in `db.UNIT_TO_MMCFD`, and `export-powerbi` **fails** if a
+unit outside that map ever appears rather than exporting NULLs. `utilization`
+is computed from the raw values, so it's unit-invariant.
+
+Two curation rules keep the fact table honest:
+- SoCal's daily-operations report mixes storage, demand, imbalance, fuel and
+  temperature rows into the same `actual`/`estimate`/`forecast` kinds as its
+  point receipts; those areas (plus NGTL's `LINEPACK`) are routed to
+  `system_metrics.csv` instead (`db.NON_THROUGHPUT_AREAS`).
+- SoCal posts the same gas day up to three times (forecast → estimate →
+  actual); the flows side keeps **one row per area-day**, best kind wins.
+  The raw `flows` table still holds all three if you ever need them.
+
+Things to know about the grain:
+- It is unique on **pipeline × gas_day × location_type × location_id ×
+  location_name × flow_direction × kind**. Don't sum without a sensible filter.
+- **`flow_direction` matters**: a point posts Receipt *and* Delivery (and NWP also
+  posts Mainline/Bi-directional) — summing across them double-counts a point.
+  Rows from the `flows` source carry a **blank** direction.
+- **`kind`** separates the series (`timely`/`evening`/`id1…` cycles, `actual`,
+  `cer_throughput`, `receipt`). NGTL's `actual`, `cer_throughput`, and `snapshot`
+  use disjoint area names, so they never overlap — but they're different series,
+  so slice by `kind` rather than blending them.
+- **One point can appear from both sources**: `socal:el_paso_ehrenberg` has a
+  `capacity` row (scheduled vs operating, from the scheduled-quantities report)
+  *and* a `flows` row (actual physical flow, from daily operations) per day.
+  They're different measures of the same point — filter on `source` (or `kind`)
+  before summing anything that includes SoCal points.
+- **NWP reuses short `location_id`s** (`1`, `2`, …) across differently-named
+  segments; `location_name` is what distinguishes them.
 
 ---
 
@@ -46,7 +92,7 @@ different columns, so combining them produces garbage.
 For each of the nine files: **Home → Get Data → Text/CSV**, browse to
 `data\powerbi\`, pick the file, click **Load** (not "Transform Data" yet):
 
-`capacity_daily.csv`, `flows.csv`, `locations.csv`, `notices.csv`,
+`throughput.csv`, `locations.csv`, `system_metrics.csv`, `notices.csv`,
 `tariff_rates_current.csv`, `tariff_rates_history.csv`, `rate_docs_current.csv`,
 `pull_health.csv`, `feed.csv`.
 
@@ -59,17 +105,19 @@ wholesale, so do type conversions in the **Power Query Editor**, which converts
 cell-by-cell and lets blanks become `null`.
 
 1. **Home → Transform data** (opens Power Query Editor).
-2. Select the **`capacity_daily`** query (left). Ctrl-click to multi-select these
-   headers: `design_cap`, `operating_cap`, `scheduled_qty`, `available_cap`,
-   `scheduled_mmcfd`, `capacity_mmcfd`, `utilization`.
+2. Select the **`throughput`** query (left). Ctrl-click to multi-select these
+   headers: `scheduled_mmcfd`, `capacity_mmcfd`, `design_mmcfd`,
+   `available_mmcfd`, `utilization`.
 3. **Transform → Data Type → Decimal Number** (Replace current if prompted). Blank
    cells become `Error`.
 4. With those columns still selected: **Transform → Replace Values ▾ → Replace
-   Errors → `null` → OK**. (`null` is ignored by `SUM`, so a missing design cap
-   correctly contributes 0 — not a literal 0 that would drag averages down.)
-5. Set **`capacity_daily[gas_day]`** and **`flows[gas_day]`** to **Date** (click the
-   type icon left of the header → Date). These are clean and won't error.
-6. On **`flows`**, set `flow` and `capability` to Decimal Number + Replace Errors → null.
+   Errors → `null` → OK**. (`null` is ignored by `SUM`, so a point that posts no
+   design capacity correctly contributes nothing — not a literal 0 that would
+   drag averages down.)
+5. Set **`throughput[gas_day]`** and **`system_metrics[gas_day]`** to **Date**
+   (click the type icon left of the header → Date). These are clean and won't error.
+6. On **`locations`**, set `position` to **Whole number** (needed to sort corridor
+   points basin→border in §7).
 7. Leave **`notices`** date columns (`posted_at`, `effective_start`, `effective_end`)
    as **Text** — `effective_end` holds values like `TBD` and some are blank, so a
    Date conversion would error, and the tables/timeline don't need them typed.
@@ -80,36 +128,39 @@ cell-by-cell and lets blanks become `null`.
 
 Switch to **Model view** (third icon, left edge).
 
-1. Drag **`capacity_daily[location_key]`** onto **`locations[location_key]`**.
+1. Drag **`throughput[location_key]`** onto **`locations[location_key]`**.
    Double-click the line to confirm: **Many-to-one (\*:1)**, **Cross-filter =
-   Single**, arrow pointing at `capacity_daily`.
+   Single**, arrow pointing at `throughput`. (`locations` holds only the ~44
+   curated key points, so most bulk rows simply won't match — that's expected;
+   the corridor pages filter to key points anyway.)
 2. Create a date table: **Modeling → New table**, enter
    `Dates = CALENDAR(DATE(2020,1,1), TODAY())`. Select the `Dates` table →
    **Table tools → Mark as date table** → column `Date`.
-3. Drag **`Dates[Date]`** onto **`capacity_daily[gas_day]`**, then **`Dates[Date]`**
-   onto **`flows[gas_day]`**. Both are **One-to-many (1:\*)** with `Dates` on the
-   "1" side, **Cross-filter = Single** (filter flows Dates → facts).
+3. Drag **`Dates[Date]`** onto **`throughput[gas_day]`**, then **`Dates[Date]`**
+   onto **`system_metrics[gas_day]`**. Both are **One-to-many (1:\*)** with `Dates`
+   on the "1" side, **Cross-filter = Single** (filter flows Dates → facts).
 4. Nothing else needs relationships — `notices`, the rate tables, `pull_health`,
    and `feed` each slice by their own `pipeline` column. Optional: one slicer
    across everything via a tiny table —
-   `Pipelines = DISTINCT(UNION(VALUES(capacity_daily[pipeline]), VALUES(notices[pipeline])))`.
+   `Pipelines = DISTINCT(UNION(VALUES(throughput[pipeline]), VALUES(notices[pipeline])))`.
 
 ## 4. Measures (DAX)
 
-In the **Data** pane, right-click **`capacity_daily` → New measure** for each of
-these (paste, Enter). Keeping them all on `capacity_daily` is fine.
+In the **Data** pane, right-click **`throughput` → New measure** for each of
+these (paste, Enter). Keeping them all on `throughput` is fine.
 
 ```dax
-Scheduled Dth   = SUM ( capacity_daily[scheduled_qty] )
-Operating Cap   = SUM ( capacity_daily[operating_cap] )
-Utilization %   = DIVIDE ( [Scheduled Dth], [Operating Cap] )
+-- everything is already MMcf/d, so these are directly comparable across systems
+Scheduled MMcfd = SUM ( throughput[scheduled_mmcfd] )
+Capacity MMcfd  = SUM ( throughput[capacity_mmcfd] )
+Utilization %   = DIVIDE ( [Scheduled MMcfd], [Capacity MMcfd] )
 
 -- utilization of key points only (mirrors the HTML dashboard's bars)
 Key Point Util % =
 CALCULATE ( [Utilization %], locations[is_key_point] = 1 )
 
 -- unused headroom, for the ranked scheduled-vs-capacity stacked bar
-Headroom Dth = [Operating Cap] - [Scheduled Dth]
+Headroom MMcfd = [Capacity MMcfd] - [Scheduled MMcfd]
 
 -- OFO days per month (CGT panel): count of OFO notices by effective month
 OFO Days =
@@ -176,45 +227,71 @@ opening → rate filings → constraint flags).
 
 ## 7. Page 2 — Supply Paths
 
-Two visuals: corridor small-multiples (flow vs capacity per point) and a ranked
-scheduled-vs-capacity bar. Add a **Slicer** on `locations[corridor]` first so
-both react to the selected corridor (`north`, `south`, `rockies`, `pnw`).
+Corridors trace the physical path from a **supply basin to the California border
+interconnect** it serves, following the western pipeline map's Key Western
+Interconnects (Sumas, Kingsgate, Opal, Malin, Topock, Needles, Ehrenberg):
 
-### 7.1 Corridor small multiples (capacity_daily)
+| corridor | basin | path |
+|---|---|---|
+| `wcsb_malin` | WCSB | NGTL West Gate → AB/BC border → GTN Kingsgate → Stn 8 → **Malin** → CGT receipt → Redwood |
+| `rockies_malin` | Rocky Mountain | Ruby: Opal → Tule Lake → **Malin** (CGT Onyx Hill) |
+| `rockies_socal` | Rocky Mountain | Kern River: Muddy Creek/Opal → Daggett → **Wheeler Ridge / Kramer Jct** |
+| `sanjuan_topock` | San Juan | EPNG: San Juan Triangle → Hackberry → **Topock** → CGT/SoCal |
+| `permian_needles` | Permian | Transwestern mainline → **Needles** → SoCal |
+| `permian_topock` | Permian | Transwestern north leg → **Topock** → CGT (same town as EPNG's Topock, different upstream system) |
+| `permian_ehrenberg` | Permian | EPNG *south* mainline (Permian/Waha gas) → **Ehrenberg** → SoCal |
+| `wcsb_pnw` | WCSB | NWP: **Sumas** → Mt. Vernon → Jackson Prairie (PNW, not CA) |
+
+(Transwestern is dual-sourced — Permian mainline plus a San Juan lateral —
+"Permian" is the working simplification. Red Hawk Plant stays a key location
+but is off the corridor: it's a power-plant delivery near Palo Verde, AZ, not
+a supply anchor.)
+
+Because everything is one table in one unit, a single chart now covers **all**
+systems — NGTL and Kern River appear in the same corridor, on the same axis.
+
+Add a **Slicer** on `locations[corridor]` first (single-select) so both visuals
+follow the chosen corridor. A `locations[basin]` slicer works too if you'd rather
+compare by basin.
+
+### 7.1 Corridor small multiples
 1. Canvas → **Visualizations → Line chart**.
-2. **X-axis:** `capacity_daily[gas_day]`.
-3. **Y-axis:** `capacity_daily[scheduled_mmcfd]` and `capacity_daily[capacity_mmcfd]`
-   (both auto-sum; scheduled = the shaded/lower series, capacity = the ceiling).
+2. **X-axis:** `throughput[gas_day]`.
+3. **Y-axis:** `throughput[scheduled_mmcfd]` and `throughput[capacity_mmcfd]`
+   (scheduled = the flowing volume, capacity = the ceiling).
 4. **Small multiples:** `locations[display_name]` — one mini-chart per point.
-5. Sort the minis basin→California: in Data view select `locations[display_name]`
-   → **Column tools → Sort by column → position**. Now the small multiples order
-   by `position`.
-6. The corridor slicer scopes it; or set a visual-level filter
-   `locations[corridor] is south` and duplicate the visual per corridor for a
-   four-panel layout.
+5. Sort the minis basin→border: Data view → `locations[display_name]` →
+   **Column tools → Sort by column → `position`** (set `position` to Whole number
+   first, per §2).
+6. **Filters on this visual:** `locations[corridor]` — pick one (the slicer then
+   swaps it). Also add `throughput[flow_direction]` and select one direction
+   **plus (Blank)** — otherwise a point's Receipt and Delivery postings both
+   plot, but flows-sourced rows (NGTL, CGT receipts, SoCal dailies) carry a
+   blank direction and would vanish under a single-direction filter.
+7. On `permian_ehrenberg` only: also filter `throughput[source]` to one of
+   `capacity`/`flows` — `socal:el_paso_ehrenberg` is the one corridor point
+   posted from both reports (scheduled vs actual — see the grain notes), so
+   its tile would sum the two measures otherwise.
+8. Keep **Format → Small multiples → Y-axis shared** so tiles are comparable.
 
-> NGTL's flow lives in `flows`, not `capacity_daily`. For an NGTL pane, make a
-> second line chart over `flows` (X = `gas_day`, Y = `flow` and `capability`,
-> Small multiples = `area`), filtered to `flows[pipeline] is ngtl`. Values are
-> 10³m³; multiply by 0.0353 in a measure if you want MMcf/d.
+> `wcsb_malin` is the one to look at first: it runs NGTL (metric, via `flows`)
+> straight through GTN (Dth, via `capacity`) to CGT's actual border receipt —
+> all three now in one line chart because `v_throughput` normalized them.
 
 ### 7.2 Ranked scheduled-vs-capacity bar (key points)
 1. Canvas → **Visualizations → Stacked bar chart**.
 2. **Y-axis:** `locations[display_name]`.
-3. **X-axis (values):** measure `[Scheduled Dth]` then `[Headroom Dth]` — they
-   stack to operating capacity (scheduled + headroom = capacity).
-4. Filters pane → `locations[is_key_point]` **is 1**.
-5. Sort by load: **⋯ → Sort axis → Scheduled Dth → Descending** (or add
-   `[Utilization %]` to the tooltip and sort by it).
-6. Flag constrained points: select the visual → **Format → Bars → Colors → fx
-   (conditional)** on the `Scheduled Dth` series → **Format style: Rules** on
-   `[Utilization %]`, e.g. `>= 0.9` → red, else the default color.
+3. **X-axis (values):** measure `[Scheduled MMcfd]` then `[Headroom MMcfd]` — they
+   stack to capacity (scheduled + headroom = capacity).
+4. Filters pane → `locations[is_key_point]` **is 1**, and pick a single
+   `throughput[flow_direction]`.
+5. Sort by load: **⋯ → Sort axis → Scheduled MMcfd → Descending**.
+6. Flag constrained points: **Format → Bars → Colors → fx (conditional)** on the
+   `Scheduled MMcfd` series → **Format style: Rules** on `[Utilization %]`,
+   e.g. `>= 0.9` → red.
 
-*(The simple "Utilization % by `display_name`" bar you already built is a fine
-lightweight substitute for 7.2 — keep whichever you prefer.)*
-
-Unit note: `*_mmcfd` columns are heat-content approximations (Dth ÷ 1.03, NGTL
-10³m³ × 0.0353) — right for corridor reasoning, not invoice math.
+Unit note: MMcf/d values are heat-content approximations (Dth ÷ 1030 at ~1030
+Btu/cf; 10³m³ × 0.0353147) — right for corridor reasoning, not invoice math.
 
 ## 8. Page 3 — Maintenance
 
