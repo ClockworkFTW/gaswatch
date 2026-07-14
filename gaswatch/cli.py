@@ -436,6 +436,14 @@ def export_powerbi(
     out_dir.mkdir(parents=True, exist_ok=True)
     cutoff = (date.today() - timedelta(days=days)).isoformat()
 
+    def scrub(row):
+        """Flatten CR/LF/TAB in string cells to spaces so a multi-line free-text
+        field (e.g. a notice subject) can't break CSV row structure. Python's csv
+        quotes embedded newlines correctly, but Power BI's CSV connector splits on
+        them anyway and offsets every following column."""
+        return [c.replace("\r", " ").replace("\n", " ").replace("\t", " ")
+                if isinstance(c, str) else c for c in row]
+
     def dump(name: str, cur, extra_cols=None, extra_fn=None) -> None:
         path = out_dir / f"{name}.csv"
         with open(path, "w", newline="", encoding="utf-8-sig") as fh:
@@ -444,7 +452,7 @@ def export_powerbi(
             w.writerow(cols + (extra_cols or []))
             n = 0
             for row in cur:
-                w.writerow(list(row) + (extra_fn(dict(zip(cols, row))) if extra_fn else []))
+                w.writerow(scrub(list(row) + (extra_fn(dict(zip(cols, row))) if extra_fn else [])))
                 n += 1
         typer.echo(f"  {name}.csv: {n} rows")
 
@@ -486,7 +494,7 @@ def export_powerbi(
                 "changed_at", "first_seen"]
         w.writerow(cols)
         for d in docs:
-            w.writerow([d[c] for c in cols])
+            w.writerow(scrub([d[c] for c in cols]))
     typer.echo(f"  rate_docs_current.csv: {len(docs)} rows")
 
     # briefing feed: one table, five sources, bucketed for the grouped view
@@ -525,7 +533,7 @@ def export_powerbi(
         w = csvmod.writer(fh)
         w.writerow(["bucket", "when", "type", "pipeline", "what", "url"])
         for row in sorted(feed):
-            w.writerow(row)
+            w.writerow(scrub(list(row)))
     typer.echo(f"  feed.csv: {len(feed)} rows")
     conn.close()
     typer.echo(f"Power BI CSV set written to {out_dir}")
