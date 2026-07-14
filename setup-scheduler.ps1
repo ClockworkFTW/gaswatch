@@ -36,15 +36,26 @@
 #>
 [CmdletBinding()]
 param(
-    [string]$InstallPath = $PSScriptRoot,
+    [string]$InstallPath,
     [switch]$IncludeCleanRaw
 )
 
 $ErrorActionPreference = "Stop"
 
-# --- validate the install path ----------------------------------------------
+# --- resolve the install path -----------------------------------------------
+# Default to the script's own folder. Fall back to the current directory when
+# $PSScriptRoot is unavailable (e.g. the script body was pasted into the shell
+# or run with -Command instead of -File).
 if ([string]::IsNullOrWhiteSpace($InstallPath)) {
-    throw "InstallPath is empty. Pass -InstallPath 'C:\path\to\gaswatch' (the folder containing .venv)."
+    if (-not [string]::IsNullOrWhiteSpace($PSScriptRoot)) {
+        $InstallPath = $PSScriptRoot
+    } else {
+        $InstallPath = (Get-Location).Path
+        Write-Host "No -InstallPath and no script-file context; using current directory: $InstallPath"
+    }
+}
+if ([string]::IsNullOrWhiteSpace($InstallPath)) {
+    throw "Could not determine InstallPath. Pass -InstallPath 'C:\path\to\gaswatch' (the folder containing .venv)."
 }
 if (-not (Test-Path -LiteralPath $InstallPath)) {
     throw "InstallPath '$InstallPath' does not exist."
