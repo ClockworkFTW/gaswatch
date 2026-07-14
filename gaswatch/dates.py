@@ -12,6 +12,7 @@ _FORMATS = (
     "%m/%d/%y %H:%M", "%m/%d/%y",
     "%d-%b-%y", "%d-%b-%Y",
     "%m-%d-%Y %H:%M", "%m-%d-%Y",
+    "%b %d %Y %I:%M%p", "%b %d %Y",  # Transwestern notices: "Jul 11 2026 6:23PM"
 )
 
 
