@@ -37,6 +37,18 @@ def _slug(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
 
 
+def _row_unit(label: str, column_unit: str) -> str:
+    """Unit for one dailyops row: the column headers carry the report default
+    ('Actual (Dth) ...'), but a few rows label their own — 'Ending Storage
+    Balance (MCF)' and 'Composite Weighted Average Temperature (° F)'."""
+    low = label.lower()
+    if "temperature" in low:
+        return "degF"
+    if "(mcf)" in low:
+        return "Mcf"
+    return column_unit
+
+
 def _fmt(d: date) -> str:
     return d.strftime("%m/%d/%Y")
 
@@ -298,8 +310,10 @@ class SocalAdapter(PipelineAdapter):
             # header: '', 'Actual (Dth) 07/09/2026', 'Estimate (Dth) 07/10/2026', 'Forecast...'
             columns = []
             for cell in rows[0][1:]:
-                m = re.match(r"(Actual|Estimate|Forecast)[^0-9]*(\d{2}/\d{2}/\d{4})", cell or "")
-                columns.append((m.group(1).lower(), to_iso(m.group(2))) if m else None)
+                m = re.match(r"(Actual|Estimate|Forecast)(?:\s*\(([^)]*)\))?[^0-9]*"
+                             r"(\d{2}/\d{2}/\d{4})", cell or "")
+                columns.append((m.group(1).lower(), m.group(2) or "Dth",
+                                to_iso(m.group(3))) if m else None)
             section = ""
             for row in rows[1:]:
                 if not row or not (row[0] or "").strip():
@@ -312,13 +326,13 @@ class SocalAdapter(PipelineAdapter):
                 for col, cell in zip(columns, values):
                     if col is None:
                         continue
-                    kind, day_iso = col
+                    kind, col_unit, day_iso = col
                     value = _num(cell)
                     if value is None or not day_iso:
                         continue
                     result.flows.append(FlowRecord(
                         pipeline=self.name, gas_day=day_iso, area=_slug(label),
-                        flow=value, unit="Dth", kind=kind,
+                        flow=value, unit=_row_unit(label, col_unit), kind=kind,
                         extra={"section": section, "label": label},
                     ))
         return result
