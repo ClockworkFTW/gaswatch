@@ -267,7 +267,7 @@ You do not enter rows by hand. Contracts come out of their PDFs via Copilot into
 Each contract fills **one** row on Contracts and **one or more** rows on ContractEntitlement (one per path, per MDQ period). If a contract has **negotiated (or discounted) rates**, it also fills **Rates** rows with `Contract` set to that contract and `RateType` = Negotiated/Discount — one per component per window, same tall shape as recourse rates. Shared **recourse** Rates (`Contract` blank) come from the pipelines' tariff sheets separately, not from the contracts.
 
 ### Extract with Copilot → staging Excel → review → load
-Use a staging workbook with one sheet per target list (Contracts, ContractEntitlement, and Rates for any negotiated/discount rates), the exact column order, and grey "review only" helper columns (SourcePage, Flags) that are deleted before loading. Run this prompt in Copilot (Claude model) with a contract attached — one contract or a small batch at a time, for accuracy and to stay under document-length limits:
+Use a staging workbook with one sheet per target list — Contracts, ContractEntitlement, Rates (negotiated) for contract-specific rates, and Rates (recourse) for tariff rates — the exact column order, and grey "review only" helper columns (SourcePage, Flags) that are deleted before loading. Run this prompt in Copilot (Claude model) with a contract attached — one contract or a small batch at a time, for accuracy and to stay under document-length limits:
 
 ```
 You are extracting data from a natural gas transportation contract PDF for loading into a database.
@@ -305,7 +305,39 @@ Rules:
 - Set Contract (in Tables 2 and 3) to the same ContractID you used in Table 1.
 ```
 
-Paste Table 1 under the Contracts headers, Table 2 under the ContractEntitlement headers, and Table 3 (if any) under the Rates headers — those rows load into Rates with `Contract` filled alongside the recourse rows you load from tariff sheets.
+Paste Table 1 under the Contracts headers, Table 2 under the ContractEntitlement headers, and Table 3 (if any) under the Rates (negotiated) headers — those rows load into Rates with `Contract` filled alongside the recourse rows you load from tariff sheets.
+
+### Extract recourse (tariff) rates with Copilot
+Recourse rates are **not** in any contract — they're the maximum tariff rates in each pipeline's Statement of Effective Rates (or currently-effective rate sheet). Load them once per pipeline as `Contract`-blank rows, and every recourse contract's cost then resolves against them. Run this prompt in Copilot with the pipeline's tariff rate sheet attached:
+
+```
+You are extracting the MAXIMUM RECOURSE rates from a natural gas pipeline's Statement of
+Effective Rates (tariff). Output ONE markdown table and nothing else — do NOT include
+negotiated or discounted rates, only the maximum recourse rates on file.
+
+TABLE — Rates (recourse), one row per component, per rate schedule, per path/zone, per window:
+Title | RateSchedule | Path | RateBasis | Component | ComponentDetail | Value | Unit | EffectiveStart | EffectiveEnd | SourcePage | Flags
+
+Rules:
+- Transcribe numbers and dates EXACTLY as written. Never compute, round, convert, or infer.
+- One row PER COMPONENT: split reservation, commodity, fuel, and each surcharge onto their own rows.
+  Component is one of Reservation, Commodity, Fuel, Surcharge.
+- Unit is one of $/Dth/month, $/Dth/day, $/Dth, % (fuel/FL&U as %). Use the exact rate design as filed
+  (e.g. reservation as $/Dth/month or $/Dth/day exactly as the sheet states it).
+- Surcharges each get their own Surcharge row with ComponentDetail naming it (e.g. ACA, EPC).
+- RateBasis = Path if the rate is quoted per path or point-pair; Zone if zone-based; Postage-stamp
+  if system-wide. Set Path to the matching path/zone, or leave blank and note the zone in Flags if
+  it isn't a point-pair.
+- Dates as YYYY-MM-DD. SourcePage: the sheet/page each value came from, for every row.
+- Use ONLY these exact spellings so they match the database:
+    RateSchedules:  [paste your RateSchedules list]
+    Paths:          [paste your Paths list]
+  If the sheet references something not in these lists, put the raw value in Flags and leave the
+  cell blank rather than forcing a near-match.
+- Do NOT emit a Contract value — recourse rows are shared and load with Contract blank.
+```
+
+Paste the result under the **Rates (recourse)** headers, fill the gold `RateType` column with `Recourse` down every row, and leave the list's `Contract` and `Point` columns blank on load. These become the shared curve the costing fallback reads when a contract has no negotiated row for a component.
 
 ### Review — the one step you can't skip
 LLM extraction of figures from PDFs is strong but not perfect, and a misread rate, MDQ, or date is silent once it's in the database. Before loading, for every row:
@@ -329,7 +361,7 @@ Populate the dimension lists **first** and confirm spelling, then load the child
 
 **Pipelines, RateSchedules, Points → Paths → Contracts → ContractEntitlement → Rates**
 
-(ContractEntitlement needs both Contracts and Paths populated first, since it looks up both.)
+Within Rates, the two sources load at different points: **recourse** rows (`Contract` blank) depend only on RateSchedules and Paths, so you can load them as soon as those dimensions exist — before or independent of Contracts. **Negotiated** rows (`Contract` filled) need Contracts loaded first, since they look up the contract. ContractEntitlement needs both Contracts and Paths.
 
 If a parent row is missing or misspelled when you load a child, the lookup cell comes in blank.
 
