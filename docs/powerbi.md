@@ -299,8 +299,20 @@ A Gantt timeline of maintenance / planned outages. The Gantt needs **date-typed*
 start/end, so add those columns first (we kept the text ones for the tables).
 
 1. **Home → Transform data** → select `notices`. **Add Column → Custom Column**:
-   - Name `start_date`, formula: `try Date.From([effective_start]) otherwise null`
-   - Repeat: name `end_date`, formula: `try Date.From([effective_end]) otherwise null`
+   - Name `start_date`, formula:
+     `try Date.FromText(Text.Start(Text.Trim([effective_start]), 10)) otherwise null`
+     (the values are ISO — `2026-07-06` or `2026-04-16 15:24` — so parsing the
+     first 10 chars strips any time and dodges locale quirks)
+   - Then name `end_date` (added second so it can reference `[start_date]`):
+     ```
+     let e = try Date.FromText(Text.Start(Text.Trim([effective_end]), 10)) otherwise null
+     in  if e <> null then e
+         else if [start_date] <> null then List.Max({[start_date], Date.From(DateTime.LocalNow())})
+         else null
+     ```
+     `TBD`/blank ends parse to null, and the fallback draws those still-open
+     outages through today instead of letting the Gantt drop them; the
+     `List.Max` keeps a future-dated TBD outage from ending before it starts.
    Set both new columns' type to **Date**. **Close & Apply**.
 2. Get the visual: **Insert → More visuals → Get more visuals**, search **Gantt**,
    add "Gantt Chart" (by Microsoft / MAQ — either free one works).
